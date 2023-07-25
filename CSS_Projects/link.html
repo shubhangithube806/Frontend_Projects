@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Links</title>
+        
+        <style>
+            i {
+              padding: 15px;
+            }
+
+            a {
+              padding-left: 15%;
+            }
+            /* unvisited link */
+            a.one:link {color: rgb(223, 174, 13);text-decoration: none;}
+            /* visited link */
+            a.one:visited {color: green;text-decoration: none;}
+            /* mouse over link */
+            a.one:hover {color: hotpink;text-decoration: underline;}
+            /* selected link */
+            a.one:active {color: blue;text-decoration: underline;}
+
+            /* unvisited link */
+            a.two:link {color: rgb(4, 54, 121);text-decoration: none;}
+            /* visited link */
+            a.two:visited {color: rgb(181, 226, 19);text-decoration: none;}
+            /* mouse over link */
+            a.two:hover {color: rgb(35, 123, 238);text-decoration: underline;font-size: 17px;}
+            /* selected link */
+            a.two:active {color: rgb(233, 60, 181);text-decoration: underline;}
+
+            a.three:link, a.three:visited {
+                background-color: rgb(33, 156, 228);
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                padding: 14px 25px;
+                margin-left: 15%;
+            }
+
+            a.three:hover, a.three:active {
+                background-color: rgb(233, 58, 180);
+            }
+
+            a.four:link, a.four:visited {
+                background-color: white;
+                color: black;
+                border: 2px solid rgb(146, 161, 5);
+                text-align: center;
+                padding: 14px 25px;
+                text-decoration: none;
+                display: inline-block;
+                margin-left: 15%;
+            }
+
+            a.four:hover, a.four:active {
+                background-color: rgb(146, 161, 5);
+                color: white;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Links</h1>
+        <h3>Styling a Link depending on state</h3>
+            <p><b><a  class="one" href="CSS Font & Text/index.html" target="_blank"> Parallax Website Link</a></b></p><br>
+            <p><b><a  class="two" href="CSS Font & Text/index.html" target="_blank">This link changes font-size</a></b></p><br>
+        <h3>Link Buttons</h3>
+            <p><b><a  class="three" href="CSS Font & Text/index.html" target="_blank">This is Button Link</a></b></p><br>
+            <p><b><a  class="four" href="CSS Font & Text/index.html" target="_blank">Click here togo Link</a></b></p>
+    </body>
+</html>

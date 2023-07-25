@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS z-index</title>
+    <style>
+        img {
+            position: absolute;
+            top: 70px;
+            left: 6px;
+            z-index: -1;
+        }
+
+        hr {
+            position: relative;
+            top: 360px;
+            border: 1px solid;
+            background-color: black;
+        }
+        .content {
+            position: relative;
+            font-size:larger;
+            top: 380px;
+        }
+
+        .container {
+            position: relative;
+           margin-bottom: 30px;
+        }
+
+        .black-box {
+            position: relative;
+            border: 2px solid black;
+            height: 150px;
+            top: 400px;
+            margin: 35px;
+            z-index: 1;
+        }
+        
+
+        .pink-box {
+            position: absolute;
+            background-color: rgb(238, 163, 163);
+            height: 130px;
+            width: 60%;
+            left: 60px;
+            top: 480px;
+            z-index: 3;
+        }
+
+        .green-box {
+            position: absolute;
+            background-color: green;
+            height: 150px;
+            width: 50%;
+            right: 10px;
+            top: 380px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">z-index Property</h1>
+    <div>
+        <p style="font-size: 21px;">z-index only works on positioned elements (position: absolute,
+            position: relative,position: fixed, or position:sticky) and flex items (elements that are
+            directchildren of display: flex elements).
+        </p>
+        <img src="Images/Amla.jpeg" alt="flower image" height="400px" width="700px">
+    </div>
+    <hr>
+    <div>
+        <p class="content">
+            An element with greater stack order is always above an element with a lower stack order: 
+        </p>
+        <div class="container">
+            <div class="black-box">Black box (z-index: 1)</div>
+            <div class="pink-box">Pink box (z-index:3)</div>
+            <div class="green-box">Green box (z-index:2)</div>
+        </div>
+    </div>
+</body>
+</html>

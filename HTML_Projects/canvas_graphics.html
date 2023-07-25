@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML Canvas Graphics</title>
+</head>
+<body>
+    <h1>HTML Canvas Graphics</h1>
+
+    <div><br>
+        <h2>Draw a Line</h2>
+        <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(100,0);
+            ctx.lineTo(100,100);
+            ctx.lineTo(200,100);
+            ctx.lineTo(100,0);
+            ctx.stroke();
+        </script>
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Draw a Circle</h2>
+        <canvas id="myCircle" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCircle");
+            var ctx = c.getContext("2d")
+            ctx.beginPath();
+            ctx.arc(100,50,45,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Draw a Text</h2>
+        <canvas id="myText" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myText");
+            var ctx = c.getContext("2d");
+            ctx.font = "45px Arial";
+            ctx.fillText("Pravin G",16,60);
+        </script>    
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Stroke Text</h2>
+        <canvas id="myStoke" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myStoke");
+            var ctx = c.getContext("2d");
+            ctx.font = "40px Arial";
+            ctx.strokeText("Shubhangi",5,60);
+        </script>
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Draw Linear Gradient</h2>
+        <canvas id="myLinearGradient" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+         <script>
+            var c = document.getElementById("myLinearGradient");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,"white");
+            grd.addColorStop(1,"green");
+
+            //Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,170,80);
+         </script>   
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Draw Linear Gradient</h2>
+        <canvas id="myLinearColors" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+         <script>
+            var c = document.getElementById("myLinearColors");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,"orange");
+            grd.addColorStop(0.4,"white");
+            grd.addColorStop(0.5,"blue");
+            grd.addColorStop(0.6,"white");
+            grd.addColorStop(1,"green");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,170,80);
+         </script>   
+    </div><br><hr><br>
+
+    <div><br>
+        <h2>Draw Circular Gradient</h2>
+        <canvas id="myCircularGradient" width="200" height="100" style="border: 1px solid #bdb7b7;">
+            Your browser does not support the HTML canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCircularGradient");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createRadialGradient(90,50,5,80,60,100);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"skyblue");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 160, 80);
+        </script>    
+    </div>
+</body>
+</html>

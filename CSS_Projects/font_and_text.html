@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <style>
+        html,body {
+    height: 100%;
+    margin: 0;
+    font-size: 16PX;
+    font-family: "Lato" sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #6666;
+}
+
+.pimg1 {
+    background-image: url("Images/lake.jpg");
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url(Images/nature.jpg);
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url(Images/sea.jpg);
+    min-height: 400px;
+}
+
+.pimg1,.pimg2,.pimg3 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.textbg {
+    background: #555a55;
+    color: #fff;
+    padding: 20px;
+}
+
+.section {
+    padding: 50px 80px;
+    text-align: center;
+}
+
+.section-light {
+    background-color: #fff;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #383f46;
+    color: #ddd;
+}
+    </style>
+</head>
+<body>
+    <section class="pimg1"></section>
+     <div class="ptext">
+            <span class="textbg">Parallax Website</span>
+        </div>
+    </section>
+    <section class="section section-light">
+        <h1>Section One</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur molestias, alias, 
+            doloribus labore sint, saepe quibusdam libero consequuntur autem nemo qui culpa repudiandae?
+             Exercitationem provident corporis quis consequuntur quam iure explicabo minima, nisi, cumque 
+             consequatur minus, accusamus ab officiis perferendis. Placeat possimus non deserunt recusandae 
+             assumenda inventore neque sint adipisci veniam cupiditate eveniet dolor esse doloribus expedita dolore 
+             necessitatibus libero, fugiat ipsa nemo eaque quo repudiandae ipsam ut corrupti? Doloribus repellendus 
+             inventore illo nulla, quod adipisci aliquid explicabo illum aliquam pariatur dolores corporis, quibusdam 
+             placeat eius repellat sint incidunt ratione cumque mollitia quasi nobis? Repellendus labore sit perspiciatis 
+             accusamus atque!</p>
+    </section>
+    <section class="pimg2">
+        <div class="ptext">
+            <span class="textbg">Explore Nature</span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h1>Section Two</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur molestias, alias, 
+            doloribus labore sint, saepe quibusdam libero consequuntur autem nemo qui culpa repudiandae?
+             Exercitationem provident corporis quis consequuntur quam iure explicabo minima, nisi, cumque 
+             consequatur minus, accusamus ab officiis perferendis. Placeat possimus non deserunt recusandae 
+             assumenda inventore neque sint adipisci veniam cupiditate eveniet dolor esse doloribus expedita dolore 
+             necessitatibus libero, fugiat ipsa nemo eaque quo repudiandae ipsam ut corrupti? Doloribus repellendus 
+             inventore illo nulla, quod adipisci aliquid explicabo illum aliquam pariatur dolores corporis, quibusdam 
+             placeat eius repellat sint incidunt ratione cumque mollitia quasi nobis? Repellendus labore sit perspiciatis 
+             accusamus atque!</p>
+    </section>
+    <section class="pimg3">
+        <div class="ptext">
+            <span class="textbg">LOOK DEEP INTO NATURE</span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h1>Section Three</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur molestias, alias, 
+            doloribus labore sint, saepe quibusdam libero consequuntur autem nemo qui culpa repudiandae?
+             Exercitationem provident corporis quis consequuntur quam iure explicabo minima, nisi, cumque 
+             consequatur minus, accusamus ab officiis perferendis. Placeat possimus non deserunt recusandae 
+             assumenda inventore neque sint adipisci veniam cupiditate eveniet dolor esse doloribus expedita dolore 
+             necessitatibus libero, fugiat ipsa nemo eaque quo repudiandae ipsam ut corrupti? Doloribus repellendus 
+             inventore illo nulla, quod adipisci aliquid explicabo illum aliquam pariatur dolores corporis, quibusdam 
+             placeat eius repellat sint incidunt ratione cumque mollitia quasi nobis? Repellendus labore sit perspiciatis 
+             accusamus atque!</p>
+    </section>
+    <section class="pimg1">
+        <div class="ptext">
+            <span class="textbg">DO SOME CODING</span>
+        </div>
+    </section>   
+</body>
+</html>

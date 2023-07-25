@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        p {
+            font-size: large;
+        }
+
+        div {
+            font-size: 17px;
+        }
+        div.visible {
+            background-color: rgb(238, 102, 124);
+            border: 1px solid black;
+            height: 80px;
+            width: 250px;
+            overflow: visible;
+        }
+
+        div.hidden {
+            background-color: rgb(236, 83, 27);
+            color: white;
+            border: 2px solid rgb(105, 88, 88);
+            height: 111px;
+            width: 250px;
+            overflow: hidden;
+        }
+        .scroll {
+            background-color: rgb(65, 208, 208);
+            border: 1px solid rgb(98, 85, 85);
+            height: 150px;
+            width: 280px;
+            overflow: scroll;
+        }
+
+        div.auto1 {
+            background-color: rgb(141, 128, 6);
+            color: white;
+            border: 1px solid black;
+            height: 150px;
+            width: 280px;
+            overflow: auto;
+            display: inline-block;
+        }
+
+        div.auto2 {
+            background-color: rgb(172, 117, 203);
+            border: 1px solid black;
+            height: 150px;
+            width: 280px;
+            overflow: auto;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        div.overflow-xy {
+            background-color: rgb(72, 206, 117);
+            border: 1px solid black;
+            height: 150px;
+            width: 280px;
+            overflow-y: scroll;
+            overflow-x:hidden
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CSS Overflow</h1>
+
+    <h2>1.overflow:visible</h2>
+    <p>visible - Default. The overflow is not clipped. The content 
+        renders outside the element's box
+    </p>
+    <div class="visible">
+        By default, the overflow is visible, meaning that it is not clipped and it renders outsidethe element's box:
+        The overflow property only works for block elements with a specified height.
+    </div><br><br>
+
+    <h2>2.overflow:hidden</h2>
+    <p>hidden - The overflow is clipped, and the rest 
+        of the content will be invisible
+    </p>
+    <div class="hidden">
+        A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. Modern digital electronic computers can perform generic sets of operations known as programs. These programs enable 
+        computers to perform a wide range of tasks.
+    </div>
+
+    <h2>3.overflow:scroll</h2>
+    <p>scroll - The overflow is clipped, and a scrollbar is added to 
+        see the rest of the content
+    </p>
+    <div class="scroll">
+        Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+        Hibiscus[2][3] is a genus of flowering plants in the mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and tropical regions throughout the world. Member species are renowned for their large, showy flowers and those species are commonly known simply as "hibiscus", or less widely known as rose mallow. Other names include hardy hibiscus, rose of sharon, and tropical hibiscus.
+        The genus includes both annual and perennial herbaceous plants, as well as woody shrubs and small trees. The generic name is derived from the Greek name ἰβίσκος (ibískos) which Pedanius Dioscorides gave to Althaea officinalis (c. 40–90 AD).[4][5]
+        Several species are widely cultivated as ornamental plants, notably Hibiscus syriacus and Hibiscus rosa-sinensis.[6]    
+    </div>
+
+    <h2>4.overflow:auto</h2>
+    <p>auto - Similar to scroll, but it adds scrollbars 
+        only when necessary
+    </p>
+    <div class="auto1">
+        Hibiscus[2][3mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and tropical regions throughout the world.
+    </div>
+    <div class="auto2">
+        Hibiscus[2][3] is a genus of flowering plants in the mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and tropical regions throughout the world. Member species are renowned for their large, showy flowers and those species are commonly known simply as "hibiscus", or less widely known as rose mallow. Other names include hardy hibiscus, rose of sharon, and tropical hibiscus.
+        The genus includes both annual and perennial        Hibiscus[2][3] is a genus of flowering plants in the mallow family, Malvaceae. The genus is quite large, comprising several hundred species that are native to warm temperate, subtropical and tropical regions throughout the world. Member species are renowned for their large, showy flowers and those species are commonly known simply as "hibiscus", or less widely known as rose mallow. Other names include hardy hibiscus, rose of sharon, and tropical hibiscus.
+        The genus includes both annual and perennial
+    </div>
+
+    <h2>5.overflow-x, overflow-y</h2>
+    <p>overflow-x specifies what to do with the left/right edges of the content.
+        overflow-y specifies what to do with the top/bottom edges of the content.
+    </p>
+    <p>Here i use overflow-x is hidden and overflow-y is scroll.</p>
+    <div class="overflow-xy">
+        An accessory fruit is a fruit that contains tissue derived from plant parts other than the ovary. In other words, the flesh of the fruit develops not from the floral ovary, but from some adjacent tissue exterior to the carpel (for example, from receptacles or sepal). As a general rule, the accessory fruit is a combination of several floral organs, including the ovary. In contrast, true fruit forms exclusively from the ovary of the flower.[1]
+        Accessory fruits are usually indehiscent, meaning fruits that do not split open to release seeds when they have reached maturity.[2]
+    </div>
+</body>
+</html>

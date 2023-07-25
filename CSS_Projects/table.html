@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+    <style>
+        table.tb1 {
+           text-align: center;
+           width: 70%;
+           margin: auto;
+           height: 300px;
+           font-size: 18px;
+        }
+        
+        table.tb1, th, td {
+            border: 1px solid black;
+        }
+
+        .bcolor1 {
+            background-color: rgb(243, 237, 138);
+        }
+
+        .bcolor2 {
+            background-color: rgb(95, 217, 233);
+        }
+
+        .bcolor3 {
+            background-color: rgb(105, 241, 105);
+        }
+
+        table.tb2 {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+            height: 300px;
+            font-size: 18px;
+        }
+
+        th.th1, td.th1 {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        tr.tr1:hover {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">CSS Tables</h1>
+
+    <table class="tb1">
+        <tr>
+            <th rowspan="3">Day</th>
+            <th colspan="3">Seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2">Schedule</th>
+            <th rowspan="2">Topic</th>
+        </tr>
+        <tr>
+            <th>Begin</th>
+            <th>End</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2" class="bcolor1">8:00 a.m.</td>
+            <td rowspan="2" class="bcolor2">5:00 p.m.</td>
+            <td>Introduction to HTML</td>
+        </tr>
+        <tr>
+            <td>Class,Id,Links</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td class="bcolor1">8:00 a.m.</td>
+            <td class="bcolor1">11:00 a.m.</td>
+            <td rowspan="2">Iframes and Tables</td>
+        </tr>
+        <tr>
+            <td class="bcolor1">11:00 a.m.</td>
+            <td class="bcolor3">2:00 p.m.</td>
+        </tr>
+        <tr>
+            <td class="bcolor3">2:00 p.m.</td>
+            <td class="bcolor2">5:00 p.m.</td>
+            <td>Background Images</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td class="bcolor1">8:00 a.m.</td>
+            <td class="bcolor3">1:00 p.m.</td>
+            <td>Image Mapping</td>
+        </tr>
+    </table>
+    <br><br><hr><br><br>
+
+    <h2 style="text-align: center;">Hoverable Table</h2>
+    <table class="tb2">
+        <tr class="tr1">
+            <th class="th1">First Name</th>
+            <th class="th1">Last Name</th>
+            <th class="th1">Savings</th>
+        </tr>
+        <tr class="tr1">
+            <td class="th1">Pravin</td>
+            <td class="th1">Gunjal</td>
+            <td class="th1">$250</td>
+        </tr>
+        <tr class="tr1">
+            <td class="th1">Swati </td>
+            <td class="th1">Jathar</td>
+            <td class="th1">$100</td>
+        </tr>
+        <tr class="tr1">
+            <td class="th1">Pradip</td>
+            <td class="th1">Jathar</td>
+            <td class="th1">$300</td>
+        </tr>
+        <tr class="tr1">
+            <td class="th1">Shubhangi</td>
+            <td class="th1">Thube</td>
+            <td class="th1">$150</td>
+        </tr>
+    </table>
+</body>
+</html>

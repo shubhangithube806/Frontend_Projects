@@ -1,0 +1,51 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("wooden.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.text {
+    color: white;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 2px rgb(235, 195, 195)
+    
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 25px;
+    margin: 70px 50PX 0;
+}
+
+a:link, a:visited {
+    color:whitesmoke;
+    border: 3px solid whitesmoke;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-shadow: 0 0 6px 3px whitesmoke;
+
+}
+
+a:hover, a:active {
+    background-color: whitesmoke;
+    color: rgb(209, 124, 14);
+    box-shadow:none;
+    border-radius: 5px;
+}
+
+
+
+    

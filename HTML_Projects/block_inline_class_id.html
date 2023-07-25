@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favourate food items</title>
+    <style>
+        /* Style the element with the id "myheader" */
+        #myheader {
+            background-color: rgb(38, 221, 221);
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Style all element with the class name "food" */
+        .food {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- An element with a unique id -->
+    <h1 id="myheader">My Favourate Food Items</h1>
+
+    <!-- Multiple elements with same id -->
+    <h2 class="food">Cake</h2>
+    <p>Cake is a <span style="color: slateblue; font-weight: bold;">flour confection</span> made from flour, sugar, and other ingredients, and is 
+        usually baked. In their oldest forms, cakes were modifications of bread, but
+         cakes now cover a wide range of preparations 
+    </p>
+
+    <!-- Multiple elements with same id -->
+    <h2 class="food">Pizza</h2>
+    <p>Pizza is a dish of <span style="color: slateblue; font-weight: bold;"> Italian origin </span>consisting of a usually round, flat base of 
+        leavened wheat-based dough topped with tomatoes, cheese. 
+    </p>
+
+    <!-- Multiple elements with same id -->
+    <h2 class="food">Ice Cream</h2>
+    <p>Ice cream is a <span style="color: slateblue; font-weight: bold;">frozen dessert</span>, typically made from milk or cream and flavoured 
+        with a sweetener, either sugar or an alternative, and a spice.
+    </p>
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML= Date()">Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+</body>
+</html>

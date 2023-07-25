@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and max-width properties.</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+        a {
+            display: block;
+            font-size: 20px;
+        }
+
+        h1.display {
+            text-decoration: underline;
+            display: inline;
+        }
+
+        p.hide {
+            display: none;
+        }
+
+        p.visible {
+            visibility: hidden;
+        }
+
+        div.ex1 {
+            width: 600px;
+            margin: auto;
+            border: 3px solid rgb(239, 22, 221);
+            padding: 12px;
+        }
+
+        div.ex2 {
+            max-width: 600px;
+            margin: auto;
+            border: 3px solid rgb(22, 239, 174);
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display and max-width properties.</h1>
+    <h2>Display Property</h2>
+
+    <h3>1.Display links as a block element</h3>
+    <a href="Images/flower.jpg" target="_blank">Flower</a>
+    <a href="Images/sea.jpg" target="_blank">Sea</a>
+    <a href="Images/nature.jpg" target="_blank">Nature</a>
+    <br><br>
+
+    <h3>2.Display heading as a inline element</h3>
+    <h1 class="display">Inline</h1>
+    <h1 class="display">Block</h1>
+    <h1 class="display">None</h1>
+
+    <h3>3.Display None</h3>
+    <P>Removes the element from the document & it does not take any space.</P>
+    <P class="hide">Removes the element from the document & it does not take any space.</P>
+    <P>Removes the element from the document & it does not take any space.</P>
+
+    <h3>4.Visibility hidden</h3>
+    <p>Hides the element, but it still takes up space in the layout.</p>
+    <p class="visible">Hides the element, but it still takes up space in the layout.</p>
+    <p>Hides the element, but it still takes up space in the layout.</p>
+
+    <h2>max-width Property</h2>
+    <div class="ex1">This element has width 600px.</div><br>
+    <div class="ex2">This element has max-width 600px.</div>
+    <br><br><br>
+</body>
+</html>

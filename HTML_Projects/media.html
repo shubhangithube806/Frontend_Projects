@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>HTML Audio</h1>
+        <audio controls muted style=" background-color: rgb(8, 2, 4);">
+            <source src="Media/flutemusic.mpeg" type="audio/mpeg">
+            <source src="Media/flutemusic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.    
+        </audio>
+   </div>
+    <br><br><hr><hr><br><br>
+
+   <div style="text-align: center;">
+    <h1>HTML Video</h1>
+    <video width="650" height="240" controls autoplay muted>
+        <source src="Media/schoolchale_hum.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    </div>
+      <br><hr><br>
+
+    <div style="text-align:center">
+        <h1>Video (with the help of javascript)</h1>
+        <br><br>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video1" width="650">
+            <source src="Media/schoolchale_hum.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+        <br><hr><br>
+
+    <div style="text-align: center;">
+        <h1>YouTube Video (using -autoplay,mute,loop)</h1>
+        <iframe width="650" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&playlist=tgbNymZ7vqY&loop=1"></iframe>
+    </div><br>
+        <br><hr><hr><br>
+
+    <div style="text-align: center;">
+        <h1>Plug-ins with Object</h1>
+        <object data="Images/keyboard.jpg" width="70%" height="500px">
+        </object>
+    </div>
+        <br><hr><br>
+
+    <div style="text-align: center;">
+        <h1>Plug-ins with embed</h1>
+        <embed width="70%" height="500px" src="Images/Workplace.png">
+    </div>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() { 
+            if (myVideo.paused) 
+            {
+                myVideo.play(); 
+            }
+            else 
+            {
+                myVideo.pause(); 
+            }
+        } 
+
+        function makeBig() { 
+            myVideo.width = 860; 
+        } 
+
+        function makeSmall() { 
+            myVideo.width = 320; 
+        } 
+
+        function makeNormal() { 
+            myVideo.width = 650; 
+        } 
+    </script>
+
+</body>
+</html>
