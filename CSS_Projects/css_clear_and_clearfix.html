@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Clear And Clearfix</title>
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+         .div4 {
+            float: left;
+            padding: 15px;
+            border: 3px solid rgb(248, 93, 119);
+        }
+
+        .div5 {
+            padding: 15px;
+            border: 3px solid rgb(14, 222, 170);
+        }
+
+        .div6 {
+            float: left;
+            padding: 15px;
+            border: 3px solid rgb(30, 104, 207);
+        }
+
+        .div7 {
+            padding: 15px;
+            border: 3px solid orangered;
+            clear: left;
+        }
+
+        div.clearfix1, div.clearfix {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+
+        .img1, .img2 {
+            float: right;
+        }
+
+        .clearfix {
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Clear And Clearfix</h1>
+    <h2>1.Clear</h2>
+    <p>When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear 
+        below it on the web page.</p>
+    
+    <h3>i.Without clear</h3>
+    <div class="div4">div4</div>
+    <div class="div5">div5 - Notice that div5 is after div4 in the HTML code. However, since div4 floats to the left, the 
+    text in div5 flows around div1.</div>
+    <br><br>
+
+    <h3>ii.With clear</h3>
+    <div class="div6">div6</div>
+    <div class="div7">div7 - Here, clear: left; moves div7 down below the floating div6. The value "left" clears elements floated to the left. 
+    You can also clear "right" and "both".</div>
+    <br><br><br><br>
+
+    <h2>2.Clearfix</h2>
+    <h3>i.Without Clearfix</h3>
+    <p>This image is floated to the right. It is also taller than the element containing it, so it overflows 
+    outside of its container:</p>
+    <div class="clearfix1">
+        <img class="img1" src="Images/fruits.jpg" alt="fruit image" height="170px" width="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Phasellus imperdiet... 
+    </div>
+    <br><br><br>
+
+    <h3 style="clear: right;">ii.With Clearfix</h3>
+    <p>We can fix this by adding a clearfix class with overflow: auto; 
+    to the containing element:</p>
+    <div class="clearfix">
+        <img class="img2" src="Images/fruits.jpg" alt="fruit image" height="170" width="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+</body>
+</html>
