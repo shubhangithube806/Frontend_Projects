@@ -6,113 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
     <style>
-        body {
-            background-color: rgb(171, 206, 219);
-        }
-
+        
         h1 {
             text-align: center;
-        }
-            
-        form {
-            font-size: 20px;
-            margin: 2px ;
+            font-size: 35px;
+            text-shadow: 2px 2px 2px rgb(236, 186, 186);
+            margin-top: 30px;
         }
 
-        .my-row
-        {
-            margin: 500px;
+        table {
+            font-family: serif;
+            font-size: 20px;
+            text-align: -webkit-center;
+            border: 2px solid black;
+            background-color: rgb(171, 206, 219);
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0  auto;
+        }
+
+        td {
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <h1>Student Registration Form</h1>
-    <form>
-        <fieldset>
+    <table>
+        <tr>
+            <td><label for="fname">Name :</label></td>
+            <td><input type="text" id="fname" name="fname" placeholder="Enter full name"></td>
+        </tr>
 
-            <legend>Personalia</legend>
+        <tr>
+            <td><label for="sname">Father's Name :</label></td>                    
+            <td><input type="text" id="sname" name="sname"></td>
+        </tr>
+        
+        <tr>
+            <td><label for="lname">Mother's Name :</label></td>
+            <td><input type="text" id="lname" name="lname"></td>
+        </tr>
 
-            <table>
+        <tr>
+            <td><label for="pnumber ">Phone Number :</label></td>
+            <td><input type="number" id="pnumber " name="pnumber " placeholder="017xxxxxxxx"></td>
+        </tr>
 
-                <tr class=".my-row">
-                    <td><label for="fname">Name :</label></td>
-                    <td><input type="text" id="fname" name="fname" placeholder="Enter full name"></td>
-                </tr>
+        <tr>
+            <td><label for="email">Email :</label></td>
+            <td><input type="email" id="email" name="email" placeholder="sample@example.com"></td>
+        </tr>
 
-                <tr>
-                    <td><label for="sname">Father's Name :</label></td>                    
-                    <td><input type="text" id="sname" name="sname"></td>
-                </tr>
-                
-                <tr>
-                    <td><label for="lname">Mother's Name :</label></td>
-                    <td><input type="text" id="lname" name="lname"></td>
-                </tr>
+        <tr>
+            <td> <label for="Gender">Gender :</label> </td>
+            <td>
+                <input type="radio" id="Gender" name="Gender" value="Male">
+                <label for="Gender">Male</label>
+                <input type="radio" id="Gender" name="Gender" value="Female">
+                <label for="Gender">Female</label>
+                <input type="radio" id="Gender" name="Gender" value="Other">
+                <label for="Gender">Other</label>
+            </td>
+        </tr>        
 
-                <label for="pnumber ">Phone Number :</label>
-                <input type="number" id="pnumber " name="pnumber " placeholder="017xxxxxxxx"><br><br>
-                
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="sample@example.com"><br><br>
-                
-                <tr>
-                    <td> <label for="Gender">Gender :</label> </td>
-                    <td>
-                        <input type="radio" id="Gender" name="Gender" value="Male">
-                        <label for="Gender">Male</label>
-                        <input type="radio" id="Gender" name="Gender" value="Female">
-                        <label for="Gender">Female</label>
-                        <input type="radio" id="Gender" name="Gender" value="Other">
-                        <label for="Gender">Other</label>
-                    </td>
-                </tr>        
+        <tr>
+            <td><label for="birthday">Date of Birth :</label></td>
+            <td><input type="date" id="birthdaty" name="birthday"></td>
+        </tr>
 
-                <label for="birthday">Date of Birth :</label>
-                <input type="date" id="birthdaty" name="birthday"><br><br>
+        <tr>
+            <td><label for="Address">Address :</label></td>
+            <td><input type="text" id="Address" name="Address" placeholder="Street, House, And Road"></td>
+        </tr>
 
-                <label for="Address">Address :</label>
-                <input type="text" id="Address" name="Address" placeholder="Street, House, And Road"><br><br>
+        <tr>
+        <td><label for="Blood Group">Blood Group :</label></td>
+        <td> <select id="Blood Group" name="Blood Group">
+                <option value="select" selected>Select</option> 
+                <option value="A+ve">A+ve</option>
+                <option value="B+ve">B+ve</option> 
+                <option value="AB+ve">AB+ve</option> 
+                <option value="O+ve">O+ve</option> 
+                <option value="O-ve">O-ve</option> 
+                <option value="AB-ve">AB-ve</option>   
+            </select></td>
+        </tr>
 
-                <label for="Blood Group">Blood Group :</label>
-                <select id="Blood Group" name="Blood Group">
-                    <option value="select" selected>Select</option> 
-                    <option value="A+ve">A+ve</option>
-                    <option value="B+ve">B+ve</option> 
-                    <option value="AB+ve">AB+ve</option> 
-                    <option value="O+ve">O+ve</option> 
-                    <option value="O-ve">O-ve</option> 
-                    <option value="AB-ve">AB-ve</option>   
-                </select><br><br>
+        <tr>
+        <td><label for="department">Department :</label></td>
+        <td>
+            <input type="radio" id="department1" name="department" value="CSE">
+            <label for="department1">CSE</label>
+            <input type="radio" id="department2" name="department" value="EEE">
+            <label for="department2">EEE</label>
+            <input type="radio" id="department3" name="department" value="BBA">
+            <label for="department3">BBA</label>
+        </td>
+        </tr>
+    
+        <tr>
+        <td><label for="course">Course :</label></td>
+        <td>
+            <input type="checkbox" id="course1" name="course1" value="C">
+            <label for="course1">C</label>
+            <input type="checkbox" id="course2" name="course2" value="C++">
+            <label for="course2">C++</label>
+            <input type="checkbox" id="course3" name="course3" value="Java">
+            <label for="course3">Java</label>
+            <input type="checkbox" id="course4" name="course4" value="Python">
+            <label for="course4">Python</label>
+            <input type="checkbox" id="course5" name="course5" value="AI">
+            <label for="course5">AI</label>
+        </td>
+        </tr>
 
-                <label for="department">Department :</label>
-                    <input type="radio" id="department1" name="department" value="CSE">
-                    <label for="department1">CSE</label>
-                    <input type="radio" id="department2" name="department" value="EEE">
-                    <label for="department2">EEE</label>
-                    <input type="radio" id="department3" name="department" value="BBA">
-                    <label for="department3">BBA</label><br><br>
-            
-                <label for="course" multiple>Course :</label>
-                    <input type="checkbox" id="course1" name="course1" value="C">
-                    <label for="course1">C</label>
-                    <input type="checkbox" id="course2" name="course2" value="C++">
-                    <label for="course2">C++</label>
-                    <input type="checkbox" id="course3" name="course3" value="Java">
-                    <label for="course3">Java</label>
-                    <input type="checkbox" id="course4" name="course4" value="Python">
-                    <label for="course4">Python</label>
-                    <input type="checkbox" id="course5" name="course5" value="AI">
-                    <label for="course5">AI</label><br><br>
+        <tr>
+        <td><label for="myfile">Photo:</label></td>
+        <td><input type="file" id="myfile" name="myfile"></td>    
+        </tr>
 
-                <label for="myfile">Photo:</label>
-                <input type="file" id="myfile" name="myfile"><br><br><br>    
-
-                <input type="submit" id="fname" value="Submit">
-
-                <input type="reset"> 
-            </table>
-    </fieldset> 
-    </form>
+        <tr>
+        <td><input type="submit" id="fname" value="Submit"></td>
+        <td><input type="reset"></td>
+        </tr>
+    </table>
+    
 </body>
 </html>
 
