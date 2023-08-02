@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* For Descendant Selector */
+        div.descendant div p {
+            background-color: pink;
+        }
+
+        /* For Child Selector */
+        div.child div > p {
+            background-color: rgb(40, 235, 170);
+        }
+
+        /* For Adjucent Sibling Selector*/
+        div.adjucent div + p {
+            background-color: rgb(255, 0, 98);
+        }
+
+        /* For General Sibling Selector */
+        div.general div ~ p {
+            background-color: rgb(234, 250, 7);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Combinators</h1>
+    <p>A combinator is something that explains the relationship 
+        between the selectors.</p>
+    
+    <h2>1.Descendant Selector (space)</h2>
+    <p>The descendant selector matches all elements that are 
+        descendants of a specified element.</p>
+    
+    <div class="descendant">   
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section><p>Paragraph 3 in the div.</p></section>
+        </div>
+
+        <p>Paragraph 4. Not in a div.</p>
+        <p>Paragraph 5. Not in a div.</p>
+    </div> 
+
+    <h2>2.Child Selector (>)</h2>
+    <p>The child selector selects all elements that are the children 
+        of a specified element.</p>
+
+    <div class="child">
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section>
+                <!-- not Child but Descendant -->
+                <p>Paragraph 3 in the div (inside a section element).</p>
+            </section>
+            <p>Paragraph 4 in the div.</p>
+        </div>
+
+            <p>Paragraph 5. Not in a div.</p>
+            <p>Paragraph 6. Not in a div.</p>
+    </div>
+
+    <h2>3.Adjucent Sibling Selector (+)</h2>
+    <P>The adjacent sibling selector is used to select an element that is directly 
+        after another specific element.</P>
+    
+    <div class="adjucent">
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+        </div>
+
+        <p>Paragraph 3. After a div.</p>
+        <p>Paragraph 4. After a div.</p>
+
+        <div>
+            <p>Paragraph 5 in the div.</p>
+            <p>Paragraph 6 in the div.</p>
+        </div>
+
+        <p>Paragraph 7. After a div.</p>
+        <p>Paragraph 8. After a div.</p>
+    </div>
+
+    <h2>General Sibling Selector (~)</h2>
+    <p>The general sibling selector selects all elements that are next 
+        siblings of a specified element.</p>
+
+     <div class="general">
+        <p>Paragraph 1.</p>
+
+        <div>
+        <p>Paragraph 2.</p>
+        </div>
+
+        <p>Paragraph 3.</p>
+
+        <code>The general sibling selector (~) selects all elements that are next 
+            siblings of a specified element.</code>
+        <p>Paragraph 4.</p>
+
+    </div>   
+</body>
+</html>
