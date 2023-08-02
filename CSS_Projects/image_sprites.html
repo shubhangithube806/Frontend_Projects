@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Sprites</title>
+    <style>
+        /* For Background Image*/
+        #home {
+            width: 43px;
+            height: 44px;
+            background: url("Images/img_navsprites.gif") -91px 0; /*-91 is of 46+1+43+1 mimus this width*/
+        }
+
+        #next {
+            width: 46px;
+            height: 44px;
+            background: url("Images/img_navsprites.gif") 0 0; /*1st 0 for strat width from 0 & 2nd 0 for start height from 0*/
+        }
+
+        /* For Navigation Image*/
+        #navlist {
+            position: relative;
+        }
+
+        #navlist li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #navlist li, #navlist a {
+            height: 44px;
+            display: block;
+        }
+
+
+        #house {
+            left: 0;
+            width: 46px;
+            background: url("Images/img_navsprites.gif") 0 0;
+            
+        }
+        
+        #left {
+            left: 63px;
+            width: 43px;
+            background: url("Images/img_navsprites.gif") -47px 0;
+        }
+
+        #right {
+            left: 129px;
+            width: 43px;
+            background: url("Images/img_navsprites.gif") -91px 0;
+        }
+
+        /*For hover effect image sprite*/
+        #navlist1 {
+            position: relative;
+        }
+
+        #navlist1 li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #navlist1 li, #navlist1 a {
+            height: 44px;
+            display: block;
+        }
+
+        #house1 {
+            left: 0;
+            width: 46px;
+            background: url("Images/img_navsprites_hover.gif") 0 0;
+        }
+
+        #left1 {
+            left: 63px;
+            width: 43px;
+            background: url("Images/img_navsprites_hover.gif") -47px 0;
+        }
+
+        #right1 {
+            left: 129px;
+            width: 43px;
+            background: url("Images/img_navsprites_hover.gif") -91px 0;
+        }
+
+        /*For Hover Effect*/
+        #house1 a:hover {
+            background: url("Images/img_navsprites_hover.gif") 0 -45px;
+        }
+
+        #left1 a:hover {
+            background: url("Images/img_navsprites_hover.gif") -47px -45px;
+        }
+
+        #right1 a:hover {
+            background: url("Images/img_navsprites_hover.gif") -91px -45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Sprites</h1>
+    
+    <h2>1.Image Sprites - As a Background Images</h2>
+    <img id="home" src="Images/img_trans (1).gif" width="1" height="1" >
+    <img id="next" src="Images/img_trans (1).gif" width="1" height="1" >
+    
+    <h2>2.Image Sprites - Create a Navigation List</h2>
+    <ul id="navlist">
+        <li id="house"><a href="z-index.html"></a></li>
+        <li id="left"><a href="color.html"></a></li>
+        <li id="right"><a href="positon.html"></a></li>
+    </ul>
+
+    <br><br>
+    <h2>3.Image Sprites - Hover Effect</h2>
+    <ul id="navlist1">
+        <li id="house1"><a href="positon.html"></a></li>
+        <li id="left1"><a href="z-index.html"></a></li>
+        <li id="right1"><a href="color.html"></a></li> 
+    </ul>
+</body>
+</html>
