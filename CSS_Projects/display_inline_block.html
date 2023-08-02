@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline-Block</title>
+    <style>
+        /* For Display Property*/
+        span.a {
+            display: inline; /* the default for span */
+            width: 100px;
+            height: 100px;
+            border: 1px solid yellow;
+            background-color: pink;
+        }
+
+        span.b {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid greenyellow;
+            background-color: aquamarine;
+            padding: 10px;
+            margin: 4px;
+        }
+
+        span.c {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid red;
+            background-color: rgb(169, 169, 224);
+            margin: 3px;
+        } 
+
+        /* For Horizontal Navigation Link*/
+        .nav {
+            background-color: black;
+            list-style-type: none;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .nav li a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <h1>The Display Property</h1>
+    <h2>1.display: inline</h2>
+    <div>display - inline does not take width & height .
+        display-inline property prevents width & height having an effect.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Suscipit <span class="a">quibusdam</span><span class="a">consequuntur</span> impedit eveniet perferendis 
+        odit saepe est ea eaque animi? 
+    </div>
+
+    <h2>2.display: inline-block</h2>
+    <div>
+        Compared to display: inline, the major difference is that display: inline-block 
+        allows to set a width and <span class="b">height</span><span class="b">element</span>.Also, with display: inline-block, 
+        the top and bottom margins/paddings are respected, but with display: inline they are not.
+    </div>
+
+    <h2>3.display: block</h2>
+    <div>
+        Compared to display: block, the <span class="c">major</span><span class="c">difference</span> is that display: inline-block does not add a line-break after the element, 
+        so the element can sit next to other elements.
+    </div>
+
+    <h1>Using inline-block To Creat Navigation Link</h1>
+    <p>
+        By default, list items are displayed vertically. In this example we use display: inline-block to display 
+        them horizontally (side by side). 
+    </p>
+    <p>
+        Note: If you resize the browser window, the links will automatically break when 
+        it becomes too crowded .
+    </p>
+
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#signin">Signin</a></li>
+        <li><a href="#login">Login</a></li>
+    </ul>
+</body>
+</html>

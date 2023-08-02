@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align</title>
+
+    <style>
+        /* For Element Align Center */
+        div.center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid red;
+            padding: 10px;
+        }
+
+        /* For Text Align Center */
+        div.center1 {
+            text-align: center;
+            border: 3px solid green;
+        }
+
+        /* For Center Image */
+        img {
+            display: block;
+            margin-left: auto;
+            margin: auto;
+        }
+
+        /* For Right Align With Position Property */
+        div.right {
+            position: absolute;
+            right: 0px;
+            width: 400px;
+            border: 3px solid rgb(238, 92, 116);
+            padding: 5px;
+        }
+
+        /* For Left Align With Float Property */
+        div.left {
+            float: left;
+            width: 400px;
+            border: 3px solid rgb(201, 201, 40);
+            padding: 5px;
+        }
+
+        /* For Center Vertically With Padding*/
+        div.vertical {
+            padding: 40px 0;
+            border: 3px solid yellowgreen;
+        }
+
+        /* For Center with Line-Height */
+        .horizontal {
+            line-height: 100px;
+            height: 100px;
+            border: 3px solid rgb(224, 30, 30);
+            text-align: center;
+        }
+
+        .horizontal p {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        } 
+
+        /* For Center with Position & Transform*/
+        .horizontal1 {
+            height: 150px;
+            position: relative;
+            border: 3px solid mediumseagreen;
+        }
+
+        .horizontal1 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        /* For Center Using Flexbox */
+        .vertical2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horizontal & Vertical Align</h1>
+
+    <h2>1.Center Align Elements</h2>
+    <p>
+        To horizontally center a block element (like div), use margin: auto;
+    </p>
+    <div class="center"><p> Hellow Everyone!</p></div>
+
+    <h2>2.Center Align Text</h2>
+    <div class="center1"><p>This text is centered.</p></div>
+
+    <h2>3.Center an Image</h2>
+    <p>
+        To center an image, set left and right margin to auto, 
+        and make it into a block element.
+    </p>
+    <img src="Images/Wood planks.jpg" alt=" Wooden img" style="width: 40%; height: 300px;">
+
+    <h2>4.Left and Right Align - Using Position</h2>
+    <p>An example of how to right align elements with 
+        the position property:  Here use Position Absolute
+    </p>
+    <div class="right">
+        <p>my younger and more vulnerable years my father gave me some advice that I've been turning 
+            over in my mind ever since.
+        </p>
+    </div>
+
+    <br><br><br><br><br>
+
+    <h2>4.Left and Right Align - Using Float</h2>
+    <p>An example of how to right align elements 
+        with the float property:
+    </p>
+    <div class="left">
+        <p>my younger and more vulnerable years my father gave me some advice that I've been turning 
+            over in my mind ever since.</p>
+    </div>
+
+    `<br><br><br><br><br><br>
+
+    <h2>5.Center Vertically - Using Padding</h2>
+    <p>we use the padding property to center the div 
+        element vertically:
+    </p>
+    <div class="vertical"><p>I am vertically centered.</p></div>
+
+    <h2>6.Center Vertically - Using Line-Height</h2>
+    <p>we use the line-height property with a value that is equal to the height property to 
+        center the div element:
+    </p>
+    <div class="horizontal">
+        <p>I am vertically and horizontally centered</p>
+    </div>
+
+    <h2>7.Center Vertically - Using Position & Transform</h2>
+    <P>we use positioning and the transform property to vertically and 
+        horizontally center the div element:
+    </P>
+    <div class="horizontal1">
+        <p>I am vertically and horizontally centered.</p>
+    </div>
+
+    <h2>Center Vertically - Using Flexbox</h2>
+    <p>A container with both the justify-content and the align-items properties set to center will align the 
+        item(s) in the center (in both axis).
+    </p>
+    <div class= "vertical2">
+        <p>I am vertically and horizontally centered.</p>
+    </div>
+</body>
+</html>
