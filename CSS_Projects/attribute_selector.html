@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        div.attribute a[target] {
+            background-color: rgb(240, 167, 31);
+        }
+
+        div.value a[target= "_blank"] {
+            background-color: rgb(75, 231, 223);
+        }
+
+        div.title [title~="flower"] {
+            border: 4px solid red;
+        }
+
+        div.hyphen [class|="top"] {
+             background-color: rgb(212, 243, 39);
+        }
+
+        div.starting [class^="top"] {
+            background-color: rgb(211, 83, 243);
+        }
+
+        div.end [class$="test"] {
+            background-color: rgb(226, 43, 156);
+        }
+
+        div.text [class*="te"] {
+            background-color: rgb(5, 253, 170);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline;">Attribute Selectors</h1>
+
+    <h2>1.CSS [attribute] Selector</h2>
+    <p>The following example selects all <a> elements with a target attribute:</p>
+    <p>The links with a target attribute gets a 
+        orange background:</p>
+    <div class="attribute">
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_blank">wikipedia.org</a>
+    </div>
+
+    <h2>2.CSS [attribute="value"] Selector</h2>
+    <p>The following example selects all <a> elements with a 
+        target="_blank" attribute:</p>
+    <div class="value">
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+    </div>
+
+    <h2>3.CSS [attribute~="value"] Selector</h2>
+    <p>The [attribute~="value"] selector is used to select elements with an attribute 
+        value containing a specified word.</p>
+    <p>The following example selects all elements with a title attribute that contains a 
+        space-separated list of words, one of which is "flower":</p>
+    <div class="title">
+        <img src="Images/flower1.jpg" title="flower" width="200" height="100">
+        <img src="Images/flower_butterfly.jpg" title="butterfy on flower" width="250" height="125">
+        <img src="Images/fruits.jpg" title="fruit" width="200" height="150">
+    </div>
+
+    <h2>4.CSS [attribute|="value"] Selector</h2>
+    <p>The [attribute|="value"] selector is used to select elements with the specified attribute, whose value can be exactly the specified value, 
+        or the specified value followed by a hyphen (-).</p>
+    <div class="hyphen">
+        <h1 class="top">Hello Everyone</h1>
+        <p class="top-text">Hello is the 1st word</p>
+        <p class="topcontent">Everyone is the 2nd word</p>
+    </div>
+
+    <h2>5.CSS [attribute^="value"] Selector</h2>
+    <p>The [attribute^="value"] selector is used to select elements with the specified attribute, whose value 
+        starts with the specified value.</p>
+    <p>The following example selects all elements with a class attribute 
+        value that starts with "top":</p>
+    <div class="starting">
+        <h1 class="top">Hello Everyone</h1>
+        <p class="top-text">Hello is the 1st word</p>
+        <p class="topcontent">Everyone is the 2nd word</p>
+    </div>
+
+    <h2>6.CSS [attribute$="value"] Selector</h2>
+    <p>The [attribute$="value"] selector is used to select elements whose attribute 
+        value ends with a specified value.</p>
+    <p>The following example selects all elements with a class attribute value 
+        that ends with "test":</p>
+    <div class="end">
+        <p class="first_test">1.Value ends with a specified value.</p>
+        <p class="second">2.Value ends with a specified value.</p>
+        <p class="my_test">3.Ends with a specified value.</p>
+        <p class="mytest">4.Value ends with a specified value.</p>
+    </div>
+
+    <h2>7.CSS [attribute*="value"] Selector</h2>
+    <p>The [attribute*="value"] selector is used to select elements whose attribute value 
+        contains a specified value.</p>
+    <p>The following example selects all elements with a class attribute value 
+        that contains "te":</p>
+    <div class="text">
+        <div class="first_test">The first div element.</div>
+        <div class="second">The second div element.</div>
+        <div class="my-test">The third div element.</div>
+        <p class="mytest">This is some text in a paragraph.</p>
+    </div>
+</body>
+</html>
