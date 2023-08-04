@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        .firstline p::first-line {
+            color: red;
+            font-variant: small-caps;
+        }
+
+        .letter p::first-letter {
+            color: brown;
+            font-size: xx-large;
+        }
+
+        p.intro::first-letter {
+            color: green;
+            font-size: 200%;
+        }
+
+        .multiple p::first-letter {
+            color: rgb(223, 4, 150);
+            font-size: xx-large;
+        }
+
+        .multiple p::first-line {
+            color: rgb(23, 23, 199);
+            font-variant: small-caps;
+        }
+
+        .before h1::before {
+            content: url("Images/smiley.gif");
+        }
+
+        .after h1::after {
+            content: url("Images/smiley.gif");
+        }
+
+        .marker ::marker {
+            color: rgb(204, 6, 98);
+            font-size: 25px;
+        }
+
+        .selection ::selection {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline;">Pseudo Elements</h1>
+    <p>A CSS pseudo-element is used to style 
+        specified parts of an element.</p>
+    <h2>1.The ::first-line Pseudo-element</h2>
+    <div class="firstline">
+    <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, 
+        and more, and more, and more, and more.</p>
+    </div>
+
+    <h2>2.The ::first-letter Pseudo-element</h2>
+    <div class="letter">
+        <p>You can use the ::first-letter pseudo-element to add a special 
+            effect to the first character of a text!</p>
+    </div>
+
+    <h2>3.Pseudo-elements and HTML Classes</h2>
+    <p class="intro">This is an introduction.</p>
+    <p>This is a paragraph with some text. A bit more text even.</p>
+
+    <h2>4.Multiple Pseudo-elements</h2>
+    <p>Several pseudo-elements can also be combined.</p>
+    <div class="multiple">
+        <p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the 
+            first letter and the first line of a text!</p>
+    </div>
+
+    <h2>5.CSS - The ::before Pseudo-element</h2>
+    <p>The ::before pseudo-element can be used to insert some 
+        content before the content of an element.</p>
+    <div class="before">
+        <h1>This is a heading</h1>
+        <p>The ::before pseudo-element inserts content before the content of an element.</p>
+        <h1>This is a heading</h1>
+    </div>
+
+    <h2>6.CSS - The ::after Pseudo-element</h2>
+    <p>The ::after pseudo-element can be used to insert some content 
+        after the content of an element.</p>
+    <div class="after">
+        <h1>This is a heading</h1>
+        <p>The ::after pseudo-element inserts content after the content of an element.</p>
+        <h1>This is a heading</h1>
+    </div>
+
+    <h2>7.CSS - The ::marker Pseudo-element</h2>
+    <p>The ::marker pseudo-element selects the markers of list items.</p>
+    <div class="marker">
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+    </div>
+
+    <h2>8.CSS - The ::selection Pseudo-element</h2>
+    <div class="selection">
+        <h1>Select some text on this page:</h1>
+        <p>This is a paragraph.</p>
+        <div>This is some text in a div element.</div>
+    </div>
+</body>
+</html>
