@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!important</title>
+    <style>
+        div.important #myid {
+            background-color: red;
+        }
+
+        div.important .myclass {
+            background-color: orange;
+        }
+
+        div.important p {
+            background-color: greenyellow !important;
+        }
+
+        
+        div.important2 #myid2 {
+            background-color: red !important;
+        }
+
+        div.important2 .myclass2 {
+            background-color: orange !important;
+        }
+
+        div.important2 p {
+            background-color: greenyellow !important;
+        }
+
+
+        div.important3 .button {
+            background-color: gray !important;
+            color: white !important;
+            padding: 5px !important;
+            border: 1px solid black !important;
+        }
+        
+        div.important3 #myDiv a {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS The !important Rule</h1>
+    <p>If you use the !important rule, it will override ALL previous styling 
+        rules for that specific property on that element!</p>
+    <h2>1.Element with !important</h2>
+    <div class= "important">
+        <p>Important About !important</p>
+        <P class="myclass">Important About !important</P>
+        <P id="myid">Important About !important</P>
+    </div>
+
+    <h2>2.Element, Id, Class with !important</h2>
+    <div class="important2">
+        <p>Important About !important</p>
+        <P class="myclass2">Important About !important</P>
+        <P id="myid2">Important About !important</P>
+    </div>
+
+    <h2>3.Button with !important</h2>
+    <div class="important3">
+        <p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+        <div id="myDiv">
+        <p>A link text inside myDiv: <a href="/html/">HTML Tutorial</a></p>
+        <p>A link button inside myDiv: <a href="/html/" class="button">HTML Tutorial</a></p>
+        </div>
+    </div>
+</body>
+</html>

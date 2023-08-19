@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* For Class and Elememnt Selector */
+        div.first .test {
+            color: green;
+        }
+        
+        div.first p {
+            color:red;
+        }
+
+        /* For Class, Id and Element Selector */
+        div.second #demo {
+            color: blue;
+        }
+
+        div.second .second2 {
+            color: red;
+        }
+
+        div.second p {
+            color: green;
+        }
+
+        /* For Class, Id, Element Selector and Inline Style */
+        div.third .third2 {
+            color: blueviolet;
+        }
+
+        div.third #part1 {
+            color: green;
+        }
+
+        div.third p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="text-decoration: underline;">*CSS Specificity*</h1> 
+   <p>If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style 
+    declaration will be applied to that HTML element.</p>
+    <h2>1.The Class and Elememnt Selector</h2>
+    <p>In this example, we have added a class selector (named "test"), and specified a green color for this class. The text will now be green (even though we have specified a red color for the element selector "p"). This is 
+        because the class selector is given higher priority:</p>
+    <div class="first">
+        <p class="test">Welcome</p>
+    </div>
+
+    <h2>2.The Class, Id and Element Selector</h2>
+    <p>In this example, we have added the id selector (named "demo"). The text will now be blue, 
+        because the id selector is given higher priority:</p>
+    <div class="second">
+        <p class="second2" id="demo">Hello World</p>
+    </div>
+
+    <h2>3.The Class, Id, Element Selector and Inline Style</h2>
+    <p>In this example, we have added an inline style for the "p" element. The text will now be pink, because 
+        the inline style is given the highest priority:</p>
+    <div class="third">
+        <p class="third2" id="part1" style="color: rgb(235, 97, 120);">Welcome Back</p>
+    </div>
+</body>
+</html>
