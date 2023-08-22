@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        color: rgb(196, 3, 3);
+    }
+
+    form {
+        margin: 0 10%;
+        color: rgb(196, 3, 3);
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    #searchbar {
+        margin-left: 50%;
+        width: 50%;
+        padding: 12px 20px 12px 40px;
+        background-image: url('Images/searchicon.png');
+    }
+
+
+    input[type=text], input[type=date], input[type=email], input[type=number], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;            
+        
+    }
+
+
+    .form-button-group {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;         
+    }
+
+    .form-button {
+        background-color: rgb(143, 170, 47);
+        color: white;
+        padding: 14px 10px;           
+        display: block;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 19px;
+        width: 150px;             
+    }
+
+    .form-button:hover {
+        background-color: rgb(102, 124, 22);
+    }
+
+    div.reg-form {
+        border-radius: 5px;
+        background-color: rgb(241, 241, 241);
+        padding: 20px;           
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        margin: 10px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        border-radius: 10px;
+        font-size: 18px;
+        resize: vertical;
+    }
+
+
+    label.name-middle {
+        line-height: 3.5em;
+    }
+
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 20px;           
+    }      
+
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 20px;
+    }        
+
+    @media screen and (max-width: 600px) {
+        
+        .col-25,  .col-75 {
+            width: 100%;   
+            margin-top: 10px;            
+        } 
+
+        label.name-middle  {
+            line-height: 0;
+        }
+
+        .margin-bot {
+            margin-bottom: 15px;
+        }
+
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+</style>
+<body>
+    <div class="reg-form">
+        <h1>Registration Form</h1><hr>
+
+        <form>
+            <input type="text" id="searchbar" name="search" placeholder="Search..">
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname" class="name-middle">First Name:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname" class="name-middle">Last Name:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                <label for="pnumber" class="name-middle">Phone Number:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="number" name="phonenumber" id="pnumber" placeholder="017xxxxxxxx">
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="country" class="name-middle">Country:</label>
+                </div>
+
+                <div class="col-75">
+                    <select id="country">
+                        <option>Select Country</option>
+                        <option>India</option>
+                        <option>Australia</option>
+                        <option>America</option>
+                        <option>China</option>
+                        <option>Pakistan</option>
+                        <option>USA</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="dob" class="name-middle">Date Of Birth:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="date" name="dob" id="dob">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="age" class="name-middle">Age:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="number" id="age" name="age" min="0" max="100" placeholder="age">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label>Gender:</label>
+                </div>
+
+                <div class="col-75 margin-bot">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender"value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="email" class="name-middle">Email:</label>
+                </div>
+
+                <div class="col-75">
+                    <input type="email" id="email" name="email" placeholder="sample@example.com">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject" name="subject" class="name-middle">Subject:</label>
+                </div>
+
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write somthing..."></textarea>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label>Level:</label>
+                </div>
+
+                <div class="col-75 margin-bot">
+                    <input type="checkbox" id="level1" name="level1" value="high_school">
+                    <label for="level1">High School</label><br><br>
+
+                    <input type="checkbox" id="level2" name="level2" value="bachelors">
+                    <label for="level2">Bachelors</label><br><br>
+
+                    <input type="checkbox" id="level3" name="level3" value="masters">
+                    <label for="level3">Masters</label><br><br>
+
+                    <input type="checkbox" id="level4" name="level4" value="phd">
+                    <label for="level4">PHD</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="favcolor">Choose a Favorite color:</label>
+                </div>
+
+                <div class="col-75  margin-bot">
+                    <input type="color" id="favcolor" name="favcolor" value="#ffff00">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="myfile">Select a file:</label>
+                </div>
+
+                <div class="col-75 margin-bot">
+                    <input type="file" id="myfile" name="myfile">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label>Languages:</label>
+                </div>
+
+                <div class="col-75">
+                    <label for="english">English</label><br>
+                    <input type="range" id="english" name="English" min="0" max="60"><br><br>
+
+                    <label for="hindi">Hindi</label><br> 
+                    <input type="range" id="hindi" name="Hindi" min="0" max="50" value="35"><br><br>
+                    
+                    <label for="marathi">Marathi</label><br>
+                    <input type="range" id="marathi" name="Marathi" min="0" max="50"><br><br>
+                       
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25"></div>
+
+                <div class="col-75 form-button-group">
+                    <input type="submit" value="submit" class="form-button">
+                    <input type="reset" value="reset" class="form-button">  
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
