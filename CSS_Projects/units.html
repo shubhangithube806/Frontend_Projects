@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        /* For Centimeter */
+        div.centimeter h1 {
+            font-size: 1cm;
+        }
+
+        div.centimeter h2 {
+            font-size: 0.5cm;
+        }
+
+        div.centimeter p {
+            font-size: 0.5cm;
+            line-height: 1cm;
+        }
+
+        /* For Millimeter*/
+        div.millimeter h1 {
+            font-size: 15mm;
+        }
+
+        div.millimeter h2 {
+            font-size: 10mm;
+        }
+
+        div.millimeter p {
+            font-size: 5mm;
+            line-height: 10mm;
+        }
+
+        /* For Inches */
+        div.inches h1 {
+            font-size: 1in;
+        }
+
+        div.inches h2 {
+            font-size: 0.5;
+        }
+
+        div.inches p {
+            font-size: 0.2in;
+            line-height: 0.5in;
+        }
+
+        /* For Pixels */
+        div.pixel h1 {
+            font-size: 50px;
+        }
+
+        div.pixel h2 {
+            font-size: 30px;
+        }
+
+        div.pixel p {
+            font-size: 16px;
+            line-height: 15px;
+        }
+
+        /* For em */
+        div.em p {
+            font-size: 16px;
+            line-height: 2em;
+        }
+
+        div.em div {
+            font-size: 30px;
+            border: 1px solid yellow;
+        }
+
+        div.em span {
+            font-size: 0.5em;
+        }
+
+        /* For rem */
+        div.rem body {
+            font-size: 16px;
+        }
+
+        div.rem div {
+            font-size: 3rem;
+            border: 1px solid rgb(85, 81, 81);
+        }
+
+        div.rem span {
+            font-size: 2rem;
+        } 
+
+        /* For vw */
+        div.vw h1 {
+            font-size: 10vw;
+        }
+
+        /* For vh */
+        div.vh h1 {
+            font-size: 10vh;
+        }
+
+        /* For vmin*/
+        div.vmin h1 {
+            font-size: 10vmin;
+        }
+
+        /* For vmax */
+        div.vmax h1 {
+            font-size: 10vmax;
+        }
+
+        /* For % */
+        div.percent body {
+            font-size: 16px;
+        }
+
+        div.percent div {
+            font-size: 150%; /* it means 24px */
+            border: 1px solid rgb(155, 146, 146);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Units</h1><br>
+
+    <!-- For Absolute Lengths -->
+    <h2 style="text-align: center;">*Absolute Lengths*</h2><hr>
+
+    <h2>1.With Centimeters 'cm'</h2>
+    <div class="centimeter" style="color: blueviolet;">
+        <h1>Heading with font size 1cm</h1>
+        <h2>Heading with font size 0.5cm</h2>
+        <p>My name is Shubhangi. (with font size 0.5cm & line height 1cm)</p>
+        <p>I am from sangamner.(with font size 0.5cm & line height 1cm)</p>
+    </div>
+
+    <h2>2.With Millimeters 'mm'</h2>
+    <div class="millimeter" style="color: rgb(13, 173, 85);">
+        <h1>Heading with font size 15mm</h1>
+        <h2>Heading with font size 10mm</h2>
+        <p>My name is Shubhangi. (with font size 5mm & line height 10mm)</p>
+        <p>I am from sangamner.(with font size 5mm & line height 10mm)</p>
+    </div>
+
+    <h2>3.With Inches 'in'  (1in = 96px = 2.54cm)</h2>
+    <div class="inches" style="color: brown;">
+        <h1>Heading with font size 1 inch</h1>
+        <h2>Heading with font size 0.5inch</h2>
+        <p>My name is Shubhangi. (with font size 0.2inch& line height 0.5inch)</p>
+        <p>I am from sangamner.(with font size 0.2inch & line height 0.5inch)</p>
+    </div>
+
+
+
+    <h2>4.With Pixels 'in'  (1px = 1/96th of 1in)</h2>
+    <div class="pixel" style="color: rgb(40, 130, 214);">
+        <h1>Heading with font size 50px</h1>
+        <h2>Heading with font size 30px</h2>
+        <p>My name is Shubhangi. (with font size 16px & line height 15px)</p>
+        <p>I am from sangamner.(with font size 16px & line height 15px)</p>
+    </div><br>
+
+
+
+    <!-- For Relative Lengths --> 
+    <h2 style="text-align: center;">*Relative Lengths*</h2><hr>
+
+    <h2>1.With 'em'</h2>
+    <p>"Relative to the font-size of the element (2em means
+        2 times the size of the current font)"</p>
+
+    <div class="em" style="color: rgb(216, 56, 104);">
+        <p>These paragraphs have a calculated line-height 
+        of: 2x16px = 32px.</p>
+
+        <p>These paragraphs have a calculated line-height 
+        of: 2x16px = 32px.</p>
+
+        <div>The font size of the div element is set to 30px.
+            <span>The span element inside the div element has a font-size of 0.5em, 
+            which equals to 0.5x30 = 15px</span>.
+        </div>
+    </div>
+
+    <h2>2.With 'rem'</h2>
+    <p>"Relative to font-size of the root element"</p>
+
+    <div class="rem" style="color: rgb(248, 56, 56);">
+        <p>The font-size of this document is 16px.</p>
+
+        <div>The font-size of this div element is 3rem.
+            <span>font size of this span is 2rem</span>
+        </div>
+    </div>
+
+    <h2>3.With Viewport Width 'vw'</h2>
+    <p>Relative to 1% of the width of the viewport*</p>
+
+    <div class="vw" style="color: rgb(42, 81, 165);">
+        <h1>Welcome</h1>
+        <p>Resize the width of the browser window to see how the font-size of h1 changes.</p>
+        <p>1vw = 1% of viewport width.</p>
+        
+    </div>
+
+    <h2>4.With Viewport Height 'vh'</h2>
+    <p>Relative to 1% of the height of the viewport*</p>
+
+    <div class="vh" style="color: rgb(226, 150, 36);">
+        <h1>Welcome</h1>
+        <p>Resize the height of the browser window to see how the font-size of h1 changes.</p>
+        <p>1vh = 1% of viewport height.</p>
+    </div>
+
+    <h2>5.With 'vmin'</h2>
+    <p>Relative to 1% of viewport's* smaller dimension</p>
+
+    <div class="vmin">
+        <h1 style="color: rgb(4, 143, 143);">Hello</h1>
+        <p>Resize the browser window (both width and height) to see how the font-size of h1 changes.</p>
+        <p>1vmin = 1vw or 1vh, whichever is smaller.</p>
+
+    </div>
+
+    <h2>6.With 'vmax'</h2>
+    <p>Relative to 1% of viewport's* larger dimension</p>
+
+    <div class="vmax">
+        <h1 style="color: rgb(4, 143, 143);">Hello</h1>
+        <p>Resize the browser window (both width and height) to see how the font-size of h1 changes.</p>
+        <p>1vmax = 1vw or 1vh, whichever is larger.</p>
+        <p>The vmax unit is not supported in Internet Explorer or Safari 6.1 and earlier versions.</p>
+    </div>
+
+    <h2>7.With '%'</h2>
+    <p>Relative to the parent element</p>
+
+    <div class="percent" style="color: rgb(167, 226, 31);">
+        <p>The font-size of this document is 16px.</p>
+        <div>The font-size of this div element is 150%.</div>
+        <p>The % unit sets the font-size relative to the current font-size.</p>
+
+    </div>
+</body>
+</html>
