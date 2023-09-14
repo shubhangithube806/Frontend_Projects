@@ -1,11 +1,9 @@
 body {
     min-height: 100vh;
     margin: 0;
-    background-image: url("wooden.jpg");
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(135deg, hsl(32, 93%, 62%), hsl(20, 100%, 60%), hsl(343, 77%, 58%), hsl(331, 79%, 50%), hsl(317, 72%, 47%), hsl(287, 70%, 45%), hsl(259, 71%, 41%), hsl(242, 71%, 44%), hsl(233, 70%, 41%));
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: 120% 150%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +39,7 @@ a:link, a:visited {
 
 a:hover, a:active {
     background-color: whitesmoke;
-    color: rgb(209, 124, 14);
+    color: rgb(245, 104, 128);
     box-shadow:none;
     border-radius: 5px;
 }
