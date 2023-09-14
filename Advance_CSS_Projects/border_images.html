@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Images</title>
+    <style>
+        #borderimg1 {
+            border: 11px solid transparent;
+            padding: 15px;
+            border-image: url('Images/border_img.jpeg') 30 round;
+        }
+
+        #borderimg2 {
+            border: 15px solid transparent;
+            padding: 15px;
+            border-image: url('Images/border_img.jpeg') 50 round;
+        }
+
+        #borderimg3 {
+            border: 10px solid transparent;
+            padding: 20px;
+            border-image: url('Images/border_img.jpeg') 20% round;
+        }
+
+        #borderimg4 {
+            border: 10px solid transparent;
+            padding: 20px;
+            border-image: url('Images/border_img.jpeg') 30% round;
+        }
+
+        #borderimg5 {
+             border: 8px solid transparent;
+            padding: 20px;
+            border-image: url('Images/border_img.jpeg') 40 round;
+        }
+
+         #borderimg6 {
+             border: 10px solid transparent;
+            padding: 20px;
+            border-image: url('Images/border_img.jpeg') 20 round;
+        }
+
+        #borderimg7 {
+            border: 8px solid transparent;
+            padding: 15px;
+            border-image: url('Images/border_img.jpeg') 30 stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">The border-images Property</h1><hr>
+
+    <p><strong>1.</strong>Here, the middle sections of the image are 
+    repeated to create the border:</p>
+    <p id="borderimg1">border-image:url(Images/border_img.jpeg) 30 round</p><br>
+
+    <p id="borderimg2">border-image:url(Images/border_img.jpeg) 50 round</p><br>
+
+    <p id="borderimg3">border-image:url(Images/border_img.jpeg) 20% round</p><br>
+
+    <p id="borderimg4">border-image:url(Images/border_img.jpeg) 30% round</p><br>
+
+    <p id="borderimg5">border-image:url(Images/border_img.jpeg) 40 round</p><br>
+
+    <p id="borderimg6">border-image:url(Images/border_img.jpeg) 20 round</p><br>
+
+    <p><strong>2.</strong>Here, the middle sections of the image are stretched to
+     create the border:</p>
+     <p id="borderimg7">border-image:url(Images/border_img.jpeg) 30 stretch</p>
+
+</body>
+</html>
