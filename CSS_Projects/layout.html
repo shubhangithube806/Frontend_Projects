@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirational Books</title>
+    <script src="https://kit.fontawesome.com/a081474abe.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            display: block;
+        }
+
+
+        /* Header */
+        .header {
+            background-color: rgb(250, 234, 204);
+            text-align: center;
+            padding: 15px 20px 1px;
+            font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+        /* Top Navbar */
+        .topnav {
+            overflow: hidden;
+            background-color: #423c3c;
+        }
+
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: rgb(247, 239, 239);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .topnav a.right-align {
+            float: right;
+        }
+
+
+        .topnav a.active {
+            background-color: rgb(247, 183, 65);
+        }
+
+        .topnav a:hover:not(.active) {
+            background-color: black;
+            color: white;
+        }
+
+        /*Columns */
+        .column {
+            display: table;
+            width: 100%;
+            border: 1px solid #eee;
+        }
+
+        .column.middle {
+            display: table-cell;
+            width: 60%;
+            border: 1px solid #eee;
+            padding: 0 1.5vw;
+        }
+
+        .column.right-side {
+            display: table-cell;
+            width: 20%;
+            border: 1px solid #eee;
+            padding: 0 1vw;
+            background-color: rgb(252, 248, 248);
+        }
+
+        .column.sidenav {
+            display: table-cell;
+            width: 20%;
+            border: 1px solid #eee;
+            background-color: rgb(250, 234, 204);
+        }
+
+        .sidenav a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 8px 20px;
+            font-size: 17px;
+
+        }
+
+        .sidenav a.active {
+            background-color: rgb(20, 19, 19);
+            color: white;
+        }
+
+        .sidenav a:hover:not(.active) {
+            background-color: rgb(250, 192, 84);
+            color: white;
+        }
+
+
+        /*Image Gallery*/
+        .img-dropdown {
+            position: relative;
+            display: inline-block;
+            padding: 14px;
+        }
+
+        .img-dropdown > img {
+            width: 150px;
+            height: 100px;
+        }
+
+        .img-dropdown > img:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .img-dropdown > a {
+            text-align: none;
+        }
+
+        .img-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 100px;
+            box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .img-dropdown-content a > img {
+            width: 180px;
+            height: 150px;
+        }
+
+        .img-dropdown-content a > img:hover {
+            cursor: pointer;
+        }
+
+        .img-dropdown:hover .img-dropdown-content {
+            display: block;
+        }
+
+        .img-dropdown-content .desc {
+            text-align: center;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        
+        /* Footer */
+        .footer {
+            background-color: rgb(236, 213, 169);
+            text-align: center;
+            padding: 20px;
+            font-size: 20px; 
+           
+        }
+
+        .footer a {
+            color: #423c3c;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+
+        /* For smaller screen size */
+        @media screen and (max-width: 600px) {
+            .column.sidenav {
+                width: 30%;
+            }
+
+            .column.middle {
+                width: 70%;
+            }
+
+            .column.right-side {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .column.sidenav, .column.middle {
+                width: 100%;
+                display: block;
+            }            
+        }
+
+        @media screen and (max-width: 500px) {
+            .topnav a, .topnav a.right-align {
+                float: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <i class="fa-solid fa-book" style="font-size: 40px; color: #0d0d0d;"></i>
+        <h1>Inspirational Books</h1>
+        <p>"The future depends on what you do today."</p>
+    </div>
+
+
+    <!-- Top Navbar -->
+    <div class="topnav">
+        <a href="#">Discover</a>
+        <a href="#" class="active">Learn</a>
+        <a href="#">Books</a>
+        <a href="#" class="right-align">Sign In</a>
+        <a href="#" class="right-align">Sign Up</a>
+    </div>
+
+
+    <!-- Columns -->
+    <div class="row">
+
+        <!-- Sidenav -->
+        <div class="column sidenav">
+            <a href="#">7 Habits</a>
+            <a href="#">Friends & Influence</a>
+            <a href="#" class="active">Think & Grow Rich</a>
+            <a href="#">Awaken Giant Within</a>
+            <a href="#">As Man Thinketh</a>
+            <a href="#">Greatest Salesman</a>
+            <a href="#">Sweat the Small Stuff</a>
+            <a href="#">Drive</a>
+            <a href="#">Power of Positive Thinking</a>
+            <a href="#">Mind of the Leader</a>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="column middle">
+
+            <h2 style="text-align: center;">Image Gallery</h2>
+
+            <div>
+
+                <div class="img-dropdown">
+                    <img src="Images/lightbulb.jpg" alt="Lightbulb img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/lightbulb.jpg">
+                            <img src="Images/lightbulb.jpg" alt="Lightbulb img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/walk.jpg" alt="walk img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/walk.jpg">
+                            <img src="Images/walk.jpg" alt="Lightbulb img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/line.jpg" alt="Lines img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/line.jpg">
+                            <img src="Images/line.jpg" alt="Line img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/book.jpeg" alt="book img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/book.jpeg">
+                            <img src="Images/book.jpeg" alt="book img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/sky.jpg" alt="sky img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/sky.jpg">
+                            <img src="Images/sky.jpg" alt="sky img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/words.jpg" alt="words img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/words.jpg">
+                            <img src="Images/words.jpg" alt="words img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/man.jpg" alt="man img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/man.jpg">
+                            <img src="Images/man.jpg" alt="man img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+                <div class="img-dropdown">
+                    <img src="Images/leaves.jpg" alt="leaves img">
+
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="Images/leaves.jpg">
+                            <img src="Images/leaves.jpg" alt="leaves img">
+                        </a>
+                        <div class="desc">Read A Book</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Side Column -->
+        <div class="column right-side">
+            <h2 style="text-align: center;">About</h2>
+            <h3 style="color: orange;">Motivation, Happiness & Potential</h3>
+            <p>"My intention is to show you exactly how to free yourself from the self-imposed limitation that is keeping you from your ultimate success."</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a target="_blank" href="https://readavidlycampaign.africa/success/?gclid=Cj0KCQjw_5unBhCMARIsACZyzS2ChrKQxI_yVjOEi3Z3vTT7XZWDWQBz8R48QFf3o70v1diceoRQfT8aAl4MEALw_wcB">
+            <i class="fa-brands fa-google"></i>
+        </a>
+
+        <a target="_blank" href="https://findawaybyjwp.com/creative-life/reading-quotes/7-twitter-accounts-with-quotes-to-inspire-you-daily/#motivational-quotes-motivational">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="https://www.calmsage.com/category/motivation/">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        
+        <a href="https://www.linkedin.com/pulse/20140320225941-140248-best-101-inspirational-quotes/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+       
+        <a target="_blank" href="mailto:shubhangithube806@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+</body>
+</html>
