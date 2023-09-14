@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Corners</title>
+    <style>
+        /* border-radius Property */
+        #rcorners1 {
+            background-color: rgb(184, 221, 81);
+            border-radius: 20px;
+            padding: 30px;
+            width: 150px;
+            height: 100px;
+        }
+
+        #rcorners2 {
+            border-radius: 30px;
+            border: 2px solid rgb(126, 38, 199);
+            padding: 20px;
+            width: 150px;
+            height: 100px;
+        }
+
+        #rcorners3 {
+            border-radius: 25px;
+            background: url('Images/wall_bg.jpg');
+            background-position: left top;
+            background-repeat: repeat;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+            color: rgb(229, 253, 9);
+            font-size: 21px;
+        }
+
+        /*  border-radius Property-Specifying Each Corner */
+        #border1 {
+            border-radius: 10px 40px 30px 5px;
+            background-color: rgb(253, 115, 35);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #border2 {
+            border-radius: 10px 40px 60px;
+            background-color: rgb(63, 189, 147);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #border3 {
+            border-radius: 20px 60px;
+            background-color: rgb(219, 156, 62);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #border4 {
+            border-radius: 30px;
+            background-color: rgb(96, 96, 148);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        /* Create Elliptical Corners */
+        #corner1 {
+            border-radius: 60px / 20px;  /* horizontal border / vertical border */
+            background-color: orchid;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #corner2 {
+            border-radius: 20px / 60px;
+            background-color: rgb(50, 172, 101);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #corner3 {
+            border-radius: 50%;
+            background-color: rgb(252, 73, 73);
+            padding: 20px;
+            width: 250px;
+            height: 150px;
+        }
+
+        #corner4 {
+            border-radius: 50%;
+            background-color: rgb(179, 89, 149);
+            padding: 20px;
+            width: 150px;
+            height: 200px;
+        }
+
+        #corner5 {
+            border-radius: 50%;
+            background-color: rgb(89, 165, 179);
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Rounded Corners</h1>
+
+    <h2>1.The border-radius Property</h2>
+    <p>Rounded corners for an element with a specified background color:</p>
+    <p id="rcorners1">Rounded corners!</p>
+
+    <p>Rounded corners for an element with a border:</p>
+    <p id="rcorners2">Rounded corners!</p>
+
+    <p>Rounded corners for an element with a background image:</p>
+    <p id="rcorners3">Rounded corners!</p>
+
+
+
+    <h2>2.The border-radius Property-Specifying Each Corner</h2>
+    <p>Four values - border-radius: 10px 40px 30px 5px:</p>
+    <p id="border1"></p>
+
+    <p>Three values - border-radius: 10px 40px 60px:</p>
+    <p id="border2"></p>
+
+    <p>Two values - border-radius: 20px 60px:</p>
+    <p id="border3">Hii i am Shubhangi.</p>
+
+    <p>One values - border-radius: 30px:</p>
+    <p id="border4"></p>
+
+
+    <h2>3.The border-radius Property-to create Elliptical Corners</h2>
+    <p>Elliptical border - border-radius: 60px / 20px: (horizontal border / vertical border )</p>
+    <p id="corner1"></p>
+
+    <p>Elliptical border - border-radius: 20px / 60px:</p>
+    <p id="corner2"></p>
+
+    <p>Ellipse border - border-radius: 50%:</p>
+    <p id="corner3"></p>
+
+    <p>Ellipse border - border-radius: 50%:</p>
+    <p id="corner4"></p>
+
+    <p>Ellipse border - border-radius: 50%:</p>
+    <p id="corner5"></p>
+
+</body>
+</html>
