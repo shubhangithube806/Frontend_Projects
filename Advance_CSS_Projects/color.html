@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+
+    <style>
+        /* For RGBA */
+        #p1 {
+            background-color: rgba(255, 0, 0, 1);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p2 {
+            background-color: rgba(0, 255, 0, 0.5);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p3 {
+            background-color: rgba(0, 0, 255, 0.3);
+            padding: 15PX;
+            width: 60%;
+        }
+
+        #p4 {
+            background-color: rgba(255, 255, 0, 0.2);
+            padding: 15PX;
+            width: 60%;
+        }
+
+        /* For HSLA */
+        #p5 {
+            background-color: hsla(120, 100%, 50%, 0.3);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p6 {
+            background-color: hsla(120, 100%, 70%, 0.3);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p7 {
+            background-color: hsla(120, 100%, 25%, 0.3);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p8 {
+            background-color: hsla(360, 100%, 50%, 1);
+            padding: 15px;
+            width: 60%;
+        }
+
+        #p9 {
+            background-color: hsla(360, 100%, 70%, 0.3);
+            padding: 15px;
+            width: 60%;
+        }
+
+        /* For Opacity */
+        #rgb1 {
+            background-color: rgb(255, 0, 0);
+            opacity: 0.2;
+            padding: 15px;
+            width: 60%;
+        }
+
+        #rgb2 {
+            background-color: rgb(255, 0, 0);
+            opacity: 0.4;
+            padding: 15px;
+            width: 60%;
+        }
+
+        #rgb3 {
+            background-color: rgb(255, 0, 0);
+            opacity: 0.6;
+            padding: 15px;
+            width: 60%;
+        }
+
+        #rgb4 {
+            background-color: rgb(255, 0, 0);
+            opacity: 0.8;
+            padding: 15px;
+            width: 60%;
+        }
+
+        #rgb5 {
+            background-color: rgb(255, 0, 0);
+            opacity: 1;
+            padding: 15px;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colors</h1>
+    <h2>1.Alpha</h2>
+    <h3>a. RGBA Colors</h3>
+    <p>RGBA color values are an extension of RGB color values with an alpha channel - which specifies 
+        the opacity for a color.</p>
+    <p>An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 
+        (fully transparent) and 1.0 (fully opaque).</p>
+
+    <p id="p1">Red with rgba(255, 0, 0, 1.0)</p>
+
+    <p id="p2">Green with rgba(0, 255, 0, 0.5)</p>
+
+    <p id="p3">Blue with rgba(0, 0, 255, 0.3)</p>
+
+    <p id="p4">Yellow with rgba(255, 255, 0, 0.2)</p>
+    
+
+    <h3>b. HSLA Colors</h3>
+    <p>HSLA color values are an extension of HSL color values with an alpha channel - which specifies 
+        the opacity for a color.</p>
+    <p>An HSLA color value is specified with: hsla(hue, saturation, lightness, alpha), where the alpha parameter defines the opacity. The alpha parameter is a number between 
+        0.0 (fully transparent) and 1.0 (fully opaque).</p>
+
+    <p id="p5">Green with hsla(120, 100%, 50%, 0.3)</p>
+
+    <p id="p6">Light Green with hsla(120, 100%, 70%, 0.3)</p>
+
+    <p id="p7">Dark Green with hsla(120, 100%, 25%, 0.3)</p>
+
+    <p id="p8">Red with hsla(360, 100%, 50%, 1.0)</p>
+
+    <p id="p9">Light Red with hsla(360, 100%, 70%, 0.3)</p>
+
+    <h2>3.Opacity</h2>
+    <p>The CSS opacity property sets the opacity for the whole element (both background color and text 
+        will be opaque/transparent).</p>
+
+    <p>The opacity property value must be a number between 0.0 (fully transparent) 
+        and 1.0 (fully opaque).</p>
+
+    <p id="rgb1">rgb(255, 0, 0);opacity:0.2;</p>
+    <p id="rgb2">rgb(255, 0, 0);opacity:0.4;</p>
+    <p id="rgb3">rgb(255, 0, 0);opacity:0.6;</p>
+    <p id="rgb4">rgb(255, 0, 0);opacity:0.8;</p>
+    <p id="rgb5">rgb(255, 0, 0);opacity:1.0;</p>
+</body>
+</html>

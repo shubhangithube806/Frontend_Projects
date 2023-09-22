@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Keywords</title>
+    <style>
+        /* transparent Keyword */
+        .trans1 {
+            background-image: url('Images/background.jpg');
+            padding: 30px;
+        }
+
+        .ex1 {
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .ex2 {
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        /* currentcolor keyword */
+        div.current {
+            color: orangered;
+            border: 5px solid currentcolor;
+            padding: 15px;
+        }
+
+        /* inherit keyword */
+        div.inherit1 {
+            border: 2px dotted green;
+            padding: 10px;
+        }
+
+        span {
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline;">Color Keywords</h1>
+
+    <h2>1.The transparent Keyword</h2>
+    <div class="trans1">
+        <div class="ex1">This div has a light blue background</div>
+
+        <div class="ex2">This div has a transparent background.</div>
+    </div>
+
+
+    <h2>2.The currentcolor Keyword</h2>
+    <p>The currentcolor keyword refers to the current value of the 
+        color property of an element.</p>
+    <div class="current">
+        This div element has a orangered text color and a orangered border. 
+    </div>
+
+
+    <h2>3.The inherit Keyword</h2>
+    <p>The inherit keyword specifies that a property should inherit its value 
+        from its parent element.</p>
+    <div class="inherit1">Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+    <br><br>
+    <div style="border: 2px solid blue; padding: 10px;">Here, the <span>span element's</span> border settings will also be inherited from the parent element</div>
+</body>
+</html>
