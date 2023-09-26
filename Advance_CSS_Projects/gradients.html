@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <style>
+
+         /* For Linear Gradient */
+        #grad1 {
+            height: 200px;
+            background-color: red; /* For browsers that do not support gradients*/
+            background-image: linear-gradient(red, green, yellow);
+        }
+
+        #grad2 {
+            height: 200px;
+            background-color: red; /* For browsers that do not support gradients*/
+            background-image: linear-gradient(to right, red ,orange, yellow, green, blue, indigo, violet);
+        }
+
+        #grad3 {
+            height: 200px;
+            background-image: linear-gradient(to bottom right, blue, orange, rgb(253, 4, 4));
+        }
+
+        #grad4 {
+            height: 200px;
+            background-color: red; /* For browsers that do not support gradients*/
+            background-image: linear-gradient(90deg, blue, orangered);
+
+        }
+
+        #grad5 {
+            height: 200px;
+            background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
+        }
+
+        #grad6 {
+            height: 200px;
+            background-image: repeating-linear-gradient(90deg, red,orange 7%, green 10%);
+        }
+
+        /* For Radial Gradient */
+        #rad1 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(red, pink, darkcyan);
+        }
+
+        #rad2 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(red 10%, pink 15%, darkcyan 60%);
+        }
+
+        #rad3 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(circle, red, pink, darkcyan); 
+        }
+
+        #rad4 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(closest-side at 60% 55%, red, pink, black);
+        }
+
+        #rad5 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(farthest-side at 60% 55%, red, pink, black);
+        }
+
+        #rad6 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(closest-corner at 60% 55%, red, pink, black);
+        }
+
+        #rad7 {
+            height: 200px;
+            width: 250px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: radial-gradient(farthest-corner at 60% 55%, red, pink, black);
+        }
+
+        #rad8 {
+            height: 200px;
+            width: 250px;
+            background-image: repeating-radial-gradient(red, pink 10%, black 15%); 
+        }
+
+        /* For Conic Gradient */
+        #conic1 {
+            height: 200px;
+            width: 200px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: conic-gradient(red, yellow, green, blue, black);
+        }
+
+        #conic2 {
+            height: 200px;
+            width: 200px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: conic-gradient(red 45deg, white 90deg, blue 210deg);
+        }
+
+        #conic3 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+            border-radius: 50%;
+        }
+
+        #conic4 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(tomato 0deg, tomato 90deg, pink 90deg, pink 180deg, indigo 180deg, indigo 270deg, darkcyan 270deg, darkcyan 360deg);
+            border-radius: 50%;
+        }
+
+        #conic5 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(from 90deg, red, yellow, green);
+            border-radius: 50%;
+        }
+
+        #conic6 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(at 60% 55%, red, yellow, green);
+            border-radius: 50%;
+        }
+
+        #conic7 {
+            height: 200px;
+            width: 200px;
+            background-image: repeating-conic-gradient(black 10%, pink 15%);
+            border-radius: 50%;
+        }
+
+        #conic8 {
+            height: 200px;
+            width: 200px;
+            background-image: repeating-conic-gradient(red 0deg 10deg, pink 10deg 20deg, orange 20deg 30deg);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline; text-align: center;">Gradients</h1>
+
+    <h2>1.Linear Gradients (goes down/up/left/right/diagonally)</h2>
+
+    <h3>a. Direction - Top to Bottom (this is default)</h3>
+    <div id="grad1"></div>
+
+    <h3>b. Direction - Left to Right</h3>
+    <div id="grad2"></div>
+
+    <h3>c. Direction - Diagonal</h3>
+    <p>You can make a gradient diagonally by specifying both the horizontal 
+        and vertical starting positions.(top left to bottom right)</p>
+    <div id="grad3"></div>
+
+    <h3>d. Using Angles</h3>
+    <div id="grad4" style="text-align: center;">90deg</div>
+
+    <h3>e. Using Transparency</h3>
+    <div id="grad5"></div>
+
+    <h3>f. Repeating a linear-gradient</h3>
+    <div id="grad6"></div>
+
+
+    <h2>2.Radial Gradients (defined by their center)</h2>
+
+    <h3>a. Radial Gradient - Evenly Spaced Color Stops (this is default)</h3>
+        <div id="rad1"></div>
+
+    <h3>b. Radial Gradient - Differently Spaced Color Stops</h3>
+    <p>Ellipse Shape</p>
+    <div id="rad2"></div>
+
+    <h3>c. Radial Gradients - Shapes</h3>
+    <p>Circle</p>
+    <div id="rad3"></div>
+
+    <h3>d. Use of Different Size Keywords</h3>
+    <h3>i.closest-side</h3>
+    <div id="rad4"></div>
+
+    <h3>ii.farthest-side</h3>
+    <div id="rad5"></div>
+
+    <h3>iii.Closest-Corner</h3>
+    <div id="rad6"></div>
+
+    <h3>iv.farthest-Corner (default)</h3>
+    <div id="rad7"></div>
+
+    <h3>e. Repeating a radial-gradient</h3>
+    <div id="rad8"></div>
+
+
+    <h2>3.Conic Gradients (rotated around a center point)</h2>
+    <h3>a.Conic Gradient: Five Colors</h3>
+    <div id="conic1"></div>
+
+    <h3>b.Conic Gradient: Three Colors and Degrees</h3>
+    <div id="conic2"></div>
+
+    <h3>c.Create Pie Charts</h3>
+    <div id="conic3"></div>
+
+    <p>Here is another pie chart with defined degrees for all the colors:</p>
+    <div id="conic4"></div>
+
+    <h3>d.Conic Gradient With Specified From Angle</h3>
+    <div id="conic5"></div>
+
+    <h3>e.Conic Gradient With Specified Center Position</h3>
+    <div id="conic6"></div>
+
+    <h3>f.Repeating a Conic Gradient</h3>
+    <div id="conic7"></div><br>
+
+    <div id="conic8"></div>
+</body>
+</html>
