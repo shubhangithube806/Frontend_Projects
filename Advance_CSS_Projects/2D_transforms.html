@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transforms</title>
+
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: palevioletred;
+            margin-bottom: 20px;
+        }
+
+        div.trans:hover {
+            transform: translate(50px, 80px);
+        }
+
+        div.rotate1:hover {
+            transform: rotate(45deg);
+        }
+
+        div.rotate2:hover {
+            transform: rotate(-60deg);
+        }
+
+        div.scale1:hover {
+            transform: scale(2, 2);
+        }
+
+        div.scale2:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        div.scale3:hover {
+            transform: scaleX(2);
+        }
+
+        div.scale4:hover {
+            transform: scaleY(2);
+        }
+
+        div.skew1:hover {
+            transform: skewX(10deg);
+        }
+
+        div.skew2:hover {
+            transform: skewY(10deg);
+        }
+
+        div.skew3:hover {
+            transform: skew(20deg, 10deg);
+        }
+
+        div.matrix1:hover {
+            transform: matrix(2, -0.3, 0, 1, 0, 0);
+        }
+
+        div.matrix2:hover {
+            transform: matrix(1, 0, 0.5, 1, 150, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>2D Transforms</h1>
+
+    <h2>1.The translate() Method</h2>
+
+    <div class="trans">
+        This div element is moved 50 pixels to the right, 
+        and 80 pixels down from its current position. 
+    </div>
+
+
+    <h2>2.The rotate() Method</h2>
+
+    <div class="rotate1">
+        This div element is rotated clockwise 45 degrees. 
+    </div>
+
+    <div class="rotate2">This div element is rotated counter-clockwise with 60 degrees.</div>
+
+
+    <h2>3.The scale() Method</h2>
+
+    <div class="scale1">
+        This div element is two times of its original width, 
+        and two times of its original height.
+    </div>
+
+    <div class="scale2">
+        This div element is decreased to be half of its 
+        original width and height.
+    </div>
+
+
+    <h2>4.The scaleX() Method</h2>
+
+    <div class="scale3">
+        This div element is two times of its 
+        original width.
+    </div>
+
+
+    <h2>5.The scaleY() Method</h2>
+
+    <div class="scale4">
+        This div element is two times of its original height.
+    </div>
+
+
+    <h2>6.The skewX() Methode</h2>
+
+    <div class="skew1">
+        This div element is skewed 10 degrees along the X-axis.
+    </div>
+
+
+    <h2>7.The skewY() Method</h2>
+
+    <div class="skew2">
+        This div element is skewed 10 degrees along the Y-axis.
+    </div>
+
+
+    <h2>8.The skew() Method</h2>
+
+    <div class="skew3">
+        This div element is skewed 20 degrees along the X-axis, 
+        and 10 degrees along the Y-axis.
+    </div>
+
+    <h2>9.The matrix() Method</h2>
+    <p>The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</p>
+
+    <div class="matrix1">
+        Using the matrix() method.
+    </div>
+
+    <div class="matrix2">
+        Another use of the matrix() method.
+    </div>
+</body>
+</html>
