@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        /* Text Shadow */
+        #horizontal {
+            text-shadow: 2px 2px lightcoral;
+        }
+
+        #blur {
+            text-shadow: 2px 2px 5px black;
+            color: white;
+        }
+
+        #shadow {
+            text-shadow: 0 0 4px #00ff00;
+        }
+
+        #multiple {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;
+        }
+
+        #border {
+            color: lightblue;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-size: 40px;
+        }
+
+        /* Box Shadow */
+        .boxshadow1 {
+            width: 350px;
+            height: 150px;
+            background-color: rgb(241, 109, 109);
+            box-shadow: 8px 8px rgb(165, 164, 164);
+        }
+
+        .boxshadow2 {
+            width: 350px;
+            height: 150px;
+            background-color: rgb(241, 109, 109);
+            box-shadow: 8px 8px 5px rgb(165, 164, 164);
+        }
+
+        .boxshadow3 {
+            width: 350px;
+            height: 150px;
+            background-color: whitesmoke;
+            box-shadow: 10px 10px 5px 12px lightpink;
+        }
+
+        .boxshadow4 {
+            width: 350px;
+            height: 150px;
+            background-color: crimson;
+            box-shadow: 10px 10px 5px lightblue inset; 
+        }
+
+        .boxshadow5 {
+            width: 350px;
+            height: 150px;
+            background-color: white;
+            box-shadow: 1px 1px 7px black inset, 5px 5px 8px red, 10px 10px 8px yellow, 15px 15px 8px green; 
+        }
+
+        div.polaroid {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+            text-align: center;
+        }
+
+        div.container1 {
+            padding: 10px;
+        }
+
+        div.card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.header {
+            background-color: palevioletred;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        div.container2 {
+            padding: 10px;
+        }
+
+        /* Text Effects */
+        .text1 {
+            white-space: nowrap;
+            width: 200px;
+            padding: 3px;
+            border: 1px solid black;
+            overflow: hidden;
+            text-align: clip;
+        }
+
+        .text2 {
+            white-space: nowrap;
+            width: 200px;
+            padding: 3px;
+            border: 1px solid black;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .text1:hover, .text2:hover {
+            overflow: visible;
+        }
+
+        .text3 {
+            width: 200px;
+            border: 1px solid black;
+            word-wrap: break-word;
+        }
+
+        .text4 {
+            width: 140px;
+            border: 1px solid black;
+            word-break: keep-all;
+        }
+
+        .text5 {
+            width: 140px;
+            border: 1px solid black;
+            word-break: break-all;
+        }
+
+        .text6 {
+            writing-mode: horizontal-tb;
+        }
+
+        span.text7 {
+            writing-mode: vertical-rl;
+        }
+
+        .text8 {
+            writing-mode: vertical-rl;
+        }
+
+        /* For Web Fonts */
+        @font-face {
+            font-family: myFirstFont;
+            src: url('Sansation\ Light.woff');
+        }
+
+        @font-face {
+            font-family: mySecondFont;
+            src: url('Sansation\ Bold.woff');
+        }
+
+        div.light {
+            font-family: myFirstFont;
+        }
+
+        div.bold {
+            font-family: mySecondFont;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline; text-align: center;">Shadow effects, Text effects and Web fonts</h1>
+
+    <h1 style="text-decoration: underline;">A. Shadow Effects</h1>
+
+    <h2>1.Text Shadow</h2>
+
+    <h1 id="horizontal">Horizontal and Vertical Shadow with Color !</h1>
+
+    <h1 id="blur">Text Shadow with Blur Effect !</h1>
+
+    <h1 id="shadow">Text-shadow with Green Neon Glow!</h1>
+
+    <h1 id="multiple">Text with Multiple Shadow!</h1>
+
+    <h1 id="border">Border Around Text!</h1>
+
+
+    <h2>2.Box Shadow</h2>
+    <div class="boxshadow1">Div with box-shadow Property</div><br><br>
+
+    <div class="boxshadow2">A div element with a 5px blurred, lightblue box-shadow</div><br><br>
+
+    <div class="boxshadow3">A div element with a blurred, lightpink box-shadow, with a spread radius of 12px</div><br><br>
+
+    <div class="boxshadow4">A div element with a blurred, lightblue, inset box-shadow</div><br><br>
+
+    <div class="boxshadow5">Multiple Shadow With Blur Effect</div><br><br>
+    
+    <p>The box-shadow property can be used to create polaroid images:</p>
+    <div class="polaroid">
+        <img src="Images/nature.jpg" alt="Nature Image" style="width: 100%; height: 200px;">
+
+        <div class="container1"><p>Piece In Nature</p></div>
+    </div>
+
+    <p>The box-shadow property can be used to create paper-like cards:</p>
+    <div class="card">
+        <div class="header"><h1>15</h1></div>
+        <div class="container2"><p>Augast 15, 2023</p></div>
+    </div><br><br>
+    
+
+
+    <h1 style="text-decoration: underline;">B. Text Effects</h1>
+
+    <h2>1.Text-Overflow</h2>
+
+    <h2>text-overflow: clip;</h2>
+    <p class="text1">This is some long text that will not fit in the box</p>
+
+    <h2>text-overflow: ellipsis;</h2>
+    <p class="text2">This is some long text that will not fit in the box</p>
+
+    <h2>2.Word Wrapping</h2>
+    <p class="text3">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+    <h2>3.Word Breaking</h2>
+    <h2>word-break: keep-all;</h2>
+    <p class="text4">This paragraph contains some text. This line will break at hyphens.</p>
+
+    <h2>word-break: break-all</h2>
+    <p class="text5">This paragraph contains some text. The lines will break at any character.</p>
+
+    <h2>4.Writing Mode</h2>
+    <p class="text6">Some text with default writing-mode.</p>
+
+    <p>Some text with a span element with a <span class="text7">vertical-rl</span> writing-mode.</p>
+
+    <p class="text8">Some text with writing-mode: vertical-rl.</p>
+
+
+    <h1 style="text-decoration: underline;">C.Web Fonts</h1>
+
+    <h1>1.Using Light Text</h1>
+    <div class="light">
+        <h2>The @Font-Face Rule</h2>
+        <p>With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.</p>
+    </div>
+
+    <h1>2.Using Bold Text</h1>
+    <div class="bold">
+        <h2>The @Font-Face Rule</h2>
+        <p>With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.</p>
+    </div>
+</body>
+</html>
