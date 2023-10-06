@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        #example1 {
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            transition: width 2s, height 4s;
+        }
+
+        #example1:hover {
+            width: 300px;
+            height: 200px;
+        }
+
+        .example2 {
+            width: 100px;
+            height: 100px;
+            background: palevioletred;
+            transition: width 2s;
+        }
+
+        #eg1 {
+            transition-timing-function: linear;
+        }
+
+        #eg2 {
+            transition-timing-function: ease;
+        }
+
+        #eg3 {
+            transition-timing-function: ease-in;
+        }
+
+        #eg4 {
+            transition-timing-function: ease-out;
+        }
+
+        #eg5 {
+            transition-timing-function: ease-in-out;
+        }
+
+        #eg6 {
+            transition-timing-function: cubic-bezier(0.02, 1.16, 0.77, 1.14);
+        }
+
+        .example2:hover {
+            width: 300px;
+        }
+
+        #example3 {
+            width: 100px;
+            height: 100px;
+            background: palevioletred;
+            transition: width 2s, height 2s, transform 2s;
+            margin-bottom: 5px;
+        }
+
+        #example3:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(360deg);
+        }
+
+        #example4 {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            background-color: palevioletred;
+            transition: width 2s, transform 2s;
+        }
+
+        #example4:hover {
+            width: 150px;
+            transform: translate(100px, 30px);
+        }
+
+        #example5 {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            background-color: palevioletred;
+            transition: transform 2s;
+        }
+
+        #example5:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        #example {
+            width: 100px;
+            height: 100px;
+            background: palevioletred;
+            transition: width 2s, height 3s;
+            transition-delay: 1s;
+        }
+
+        #example:hover {
+            width: 300px;
+            height: 200px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>Transitions</h1>
+
+    <h2>1.The transiton Property</h2>
+    <div id="example1"></div>
+
+
+    <h2>2.The transition-timing-function Property</h2>
+    <p>"Specify the Speed Curve of the Transition"</p>
+
+    <div id="eg1" class="example2">linear</div>
+    <p>Same speed from start to end</p><br>
+
+    <div id="eg2" class="example2">ease</div>
+    <p>Slow start, then fast, then end slowly (this is default)</p><br>
+
+    <div id="eg3" class="example2">ease-in</div>
+    <p>Specifies a transition effect with a slow start</p><br>
+
+    <div id="eg4" class="example2">ease-out</div>
+    <p>Specifies a transition effect with a slow end</p><br>
+
+    <div id="eg5" class="example2">ease-in-out</div>
+    <p>Specifies a transition effect with a slow start and end</p>
+
+    <div id="eg6" class="example2">cubic-bezier</div>
+
+    <h2>3.Transitions + Transformation</h2>
+    <div id="example3">rotate</div>
+    <div id="example4">translate</div>
+    <div id="example5">scale</div>
+    
+    <h2>4.The transition-delay Property</h2>
+    <div id="example"></div>
+
+    <br><br><br><br><br><br>
+</body>
+</html>

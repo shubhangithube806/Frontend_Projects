@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+    /* The element to apply the animation to */
+    #div1 {
+       width: 100px; 
+       height: 100px;
+       background-color: cornflowerblue;
+       animation-name: example1;
+       animation-duration: 5s;
+    }
+
+    /* The animation code */
+    @keyframes example1 {
+        from {background-color: cornflowerblue;}
+        to {background-color: red;}
+    }
+
+    #div2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: example2;
+        animation-duration: 8s;
+    }
+
+    @keyframes example2 {
+        0%  {background-color: blue;}
+        25% {background-color: red;}
+        50% {background-color: green;}
+        100% {background-color: hotpink;}
+    }
+
+    #div3 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: pink;
+        animation-name: example3;
+        animation-duration: 8s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        margin-bottom: 200px;
+    }
+
+    @keyframes example3 {
+        0% {background-color: pink; left:0px; top: 0px;}
+        25% {background-color: blue; left:200px; top: 0px;}
+        50% {background-color: orange; left:200px; top: 200px;}
+        75% {background-color: red; left:0px; top: 200px;}
+        100% {background-color: pink; left:0px; top: 0px;}
+    }
+
+    #div4 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: pink;
+        animation-name: example4;
+        animation-duration: 8s;
+        animation-delay: 2s;
+        animation-direction: reverse;
+        margin-bottom: 200px;
+    }
+
+    @keyframes example4 {
+        0% {background-color: pink; left:0px; top: 0px;}
+        25% {background-color: blue; left:200px; top: 0px;}
+        50% {background-color: orange; left:200px; top: 200px;}
+        75% {background-color: red; left:0px; top: 200px;}
+        100% {background-color: pink; left:0px; top: 0px;}
+    }
+
+    .speed {
+        width: 150px;
+        height: 80px;
+        background: red;
+        position: relative;
+        font-weight: bold;
+        animation: mymove 4s infinite;
+        margin-bottom: 10px;
+    }
+
+    #div5 {
+        animation-timing-function: linear;
+    }
+
+    
+    #div6 {
+        animation-timing-function: ease;
+    }
+
+    
+    #div7 {
+        animation-timing-function: ease-in;
+    }
+
+    
+    #div8 {
+        animation-timing-function: ease-out;
+    }
+
+    
+    #div9 {
+        animation-timing-function: ease-in-out;
+    }
+
+    #div10 {
+        animation-timing-function: cubic-bezier(0.08, 1.79, 1,-0.94);
+    }
+
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 300px;}
+    }
+    </style>
+</head>
+<body>
+    <h1>Animations</h1>
+`
+<h2>i.Color Change</h2>
+    <p>From Red to Blue</p>
+    <div id="div1"></div><br>
+
+    <p>Blue-Red-Green-Hotpink</p>
+    <div id="div2"></div>
+
+    <h2>ii.Animation Duration</h2>
+    <div id="div3"></div>
+
+    <h2>iii.Animation Directions</h2>
+    <div id="div4"></div>
+
+    <h2>iv.Speed Curve of the Animation</h2>
+    <div id="div5" class="speed">linear</div>
+    <div id="div6" class="speed">ease</div>
+    <div id="div7" class="speed">ease-in</div>
+    <div id="div8" class="speed">ease-out</div>
+    <div id="div9" class="speed">ease-in-out</div>
+    <div id="div10" class="speed">cubic-bezier(n,n,n,n)</div>
+</body>
+</html>
