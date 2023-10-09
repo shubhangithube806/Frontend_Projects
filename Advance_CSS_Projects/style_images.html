@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Images</title>
+
+    <style>
+        .img1 {
+        border-radius: 8px;
+        }
+
+        .img2 {
+            border-radius: 50%;
+        }
+
+        .img3 {
+            border-radius: 50%;
+        }
+
+        /* Thumbnail Images */
+        .img4 {
+            border: 1px solid rgb(122, 117, 117);
+            padding: 5px;
+            border-radius: 4px;
+            width: 150px;
+        }
+
+        .img5 {
+            border: 1px solid rgb(122, 117, 117);
+            padding: 5px;
+            border-radius: 4px;
+            width: 150px;
+        }
+
+        .img5:hover {
+            box-shadow: 0 0 2px  1px rgba(0, 140, 186, 0.5);
+        }
+
+        /* Responsive Images */
+        .img6 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img7 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Transparent Image */
+        .img8 {
+            opacity: 0.2;
+        }
+
+        .img9 {
+            opacity: 0.5;
+        }
+
+        .img10 {
+            opacity: 1;
+        }
+
+        /* Image Text */
+        .container {
+            position: relative;
+            margin: 20px;
+        }
+
+        .topleft {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 20px;
+        }
+
+        .img11 {
+            width: 100%;
+            height: auto;
+            opacity: 0.3;
+        }
+
+
+        .topright {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 20px;
+        }
+
+        .bottomright {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+
+         /* Image Hover Overlay */
+         .container1 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image1 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: palevioletred;
+        }
+
+        .container1:hover .overlay1 {
+            opacity: 1;
+        }
+
+        .text1 {
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .container2 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image2 {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: 0.5 ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transform: 0.5 ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .container2:hover .image2 {
+            opacity: 0.3;
+        }
+
+        .container2:hover .middle {
+            opacity: 1;
+        }
+
+        .text2 {
+            background-color: rgb(96, 202, 206);
+            color: white;
+            font-size: 20px;
+            padding: 16px 32px;
+        }
+
+        .container3 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image3 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay3 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: palevioletred;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: 0.5s ease;
+        }
+
+        .container3:hover .overlay3 {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .text3 {
+            white-space: nowrap;
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+
+        }
+
+        .container4 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image4 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: palevioletred;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: 0.5s ease;
+        }
+
+        .container4:hover .overlay4 {
+            height: 100%;
+        }
+
+        .text4 {
+            white-space: nowrap;
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+
+        }
+
+        .container5 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image5 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay5 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: palevioletred;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: 0.5s ease;
+        }
+
+        .container5:hover .overlay5 {
+            width: 100%;
+        }
+
+        .text5 {
+            white-space: nowrap;
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .container6 {
+            position: relative;
+            width: 40%;
+        }
+
+        .image6 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay6 {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: palevioletred;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: 0.5s ease;
+        }
+
+        .container6:hover .overlay6 {
+            width: 100%;
+            left: 0;
+        }
+
+        .text6 {
+            white-space: nowrap;
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+                /* Image Filters */
+        .filter {
+            width: 33%;
+            height: auto;
+            float: left;
+            max-width: 235px;
+        }
+
+        #blur {filter: blur(3px);}
+        #brightness {filter: brightness(250%);}
+        #contrast {filter: contrast(200%);}
+        #grayscale {filter: grayscale(100%);}
+        #huerotate {filter: hue-rotate(180deg);}
+        #invert {filter: invert(100%);}
+        #opacity {filter: opacity(50%);}
+        #saturate {filter: saturate(7);}
+        #sepia {filter: sepia(100%);}
+        #shadow {filter: drop-shadow(6px 8px 9px rgb(230, 39, 71)); margin-bottom: 200px;}
+
+
+       
+</style>
+    </style>
+    
+</head>
+<body>
+    <h1>Styling Images</h1>
+
+    <h2>i.Rounded Images</h2>
+
+    <img src="Images/nature.jpg"  class="img1" alt="Image" width="300" height="300">
+
+    <img src="Images/nature.jpg" class="img2" alt="Image" width="300" height="300">
+    
+    <img src="Images/nature.jpg" class="img3" alt="Image" width="300" height="200">
+
+
+    <h2>ii.Thumbnail Images</h2>
+    
+    <p>Thumbnail Image:</p>
+    <img src="Images/nature.jpg" class="img4" alt="Image" style="width: 150px; height: 100px;">
+
+    <p>Thumbnail Image as Link:</p>
+    <a target="_blank" href="Images/nature.jpg">
+        <img src="Images/nature.jpg" class="img5" alt="Image" style="width: 150px; height: 100px;">
+    </a>
+   
+
+    <h2>iii.Responsive Images</h2>
+    <img src="Images/wall_bg.jpg" class="img6" alt="Image" width="1000" height="300">
+
+    <h2>iv.Center an Image</h2>
+    <img src="Images/wall_bg.jpg" class="img7" alt="image" style="width: 50%;">
+
+
+    <h2>v.Transperant Image</h2>
+    <img src="Images/nature.jpg" class="img8" alt="Image" width="170" height="100">
+    <p>0.2 Opacity</p>
+
+    <img src="Images/nature.jpg" class="img9" alt="Image" width="170" height="100">
+    <p>0.5 Opacity</p>
+
+    <img src="Images/nature.jpg" class="img10" alt="Image" width="170" height="100">
+    <p>1 Opacity</p>
+
+
+    <h2>vi.Image Text</h2>
+    <div class="container">
+        <img src="Images/wall_bg.jpg" class="img11" alt="image" width="1000" height="300">
+        <div class="topleft">Top Left</div>
+        <div class="topright">Top Right</div>
+        <div class="bottomleft">Bottom Left</div>
+        <div class="bottomright">B0ttom Right</div>
+        <div class="centered">Centered</div>
+    </div>
+
+
+    <h2>viii.Image Hover Overlay</h2>
+
+    <h1>Fade in Text:</h1>
+    <div class=" container1">
+        <img src="Images/img_avatar.png" alt="image" class="image1" width="200px" height="200px">
+
+        <div class="overlay1">
+            <div class="text1">Hello World</div>
+        </div>
+    </div>
+
+    <h1>Fade in Box</h1>
+    <div class="container2">
+        <img src="Images/img_avatar.png" alt="Image" class="image2" style="width: 100%;">
+
+        <div class="middle">
+            <div class="text2">Shubhangi</div>
+        </div>
+    </div>
+
+
+    <h1>Slide in Overlay from the Top</h1>
+    <div class="container3">
+        <img src="Images/img_avatar.png" alt="Image" class="image3">
+
+        <div class="overlay3">
+            <div class="text3">Hello World</div>
+        </div>
+    </div>
+
+    <h1>Slide in Overlay from the Bottom</h1>
+    <div class="container4">
+        <img src="Images/img_avatar.png" alt="Image" class="image4">
+
+        <div class="overlay4">
+            <div class="text4">Hello World</div>
+        </div>
+    </div>
+
+    <h1>Slide in Overlay from the Left</h1>
+    <div class="container5">
+        <img src="Images/img_avatar.png" alt="Image" class="image5">
+
+        <div class="overlay5">
+            <div class="text5">Hello World</div>
+        </div>
+    </div>
+
+    <h1>Slide in Overlay from the Right</h1>
+    <div class="container6">
+        <img src="Images/img_avatar.png" alt="Image" class="image6">
+
+        <div class="overlay6">
+            <div class="text6">Hello World</div>
+        </div>
+    </div>
+
+
+    <h2>vii.Image Filters</h2>
+    <img src="Images/berryfruit.jpg" class="filter" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="blur" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="brightness" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="contrast" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="grayscale" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="huerotate" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="invert" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="opacity" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="saturate" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="sepia" alt="image" width="300" height="300">
+    <img src="Images/berryfruit.jpg" class="filter" id="shadow" alt="image" width="300" height="300">
+
+
+   
+    
+</body>
+
+</html>
