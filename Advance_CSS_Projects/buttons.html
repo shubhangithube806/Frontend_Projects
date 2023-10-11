@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Buttons</title>
+
+    <style>
+        body {
+            margin-left: 20px;
+        }
+        .button {
+            background-color: #4c8baf;
+            color: white;
+            font-size: 16px;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display:inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button2 {
+            background-color: #f44336;
+        }
+
+        .button3 {
+            background-color: gray;
+        }
+
+        .button4 {
+            background-color: #e94aa7;
+            font-size: 20px;
+        }
+
+        .button5 {
+            background-color: rgb(99, 96, 96);
+            font-size: 24px;
+        }
+
+        .button6 {
+            background-color: #3eccc5;
+            border-radius: 12px;
+        }
+
+        .button7 {
+            background-color: rgb(199, 197, 197);
+            border-radius: 50%;
+            color: black;
+        }
+
+        .button8 {
+            border: 2px solid red;
+            background-color: white;
+            color: black;
+        }
+
+        .button9 {
+            border: 2px solid palevioletred;
+            background-color: white;
+            color: black;
+        }
+
+        .button10 {
+            border: 2px solid blue;
+            background-color: white;
+            color: black;
+        }
+
+        .button11 {
+            border: 2px solid blue;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            transition-duration: 0.5s;
+        }
+
+        .button11:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .button12 {
+            border: 2px solid orangered;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            transition-duration: 0.5s;
+        }
+
+        .button12:hover {
+            background-color: orangered;
+            color: white;
+        }
+
+        .button13 {
+            background-color: palevioletred;
+            color: white;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+        }
+
+        .button13:hover {
+            border: 2px solid palevioletred;
+            background-color: white;
+            color: black;
+        }
+
+        .button14 {
+            background-color: rgb(95, 207, 207);
+            color: white;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+        }
+
+        .button14:hover {
+            border: 2px solid rgb(131, 201, 201);
+            background-color: white;
+            color: black;
+        }
+
+        .button15 {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .button16:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .button17 {
+            background-color: orange;
+            width: 250px;
+            display: block;
+        }
+
+        .button18 {
+            background-color: rgb(168, 28, 168);
+            width: 50%;
+        }
+
+        .button19 {
+            background-color: rgb(111, 163, 31);
+            width: 100%;
+        }
+
+        .button20 {
+            float: left;
+            background-color: #8440d1;
+            margin: 0;
+            border: 1px solid green;
+        }
+
+        .button21 {
+            float: left;
+            background-color: #8440d1;
+            margin: 0;
+            border: 1px solid green;
+        }
+
+        .button22 {
+            float: left;
+            background-color: #8440d1;
+            margin: 0;
+            border: 1px solid green;
+        }
+
+        .button23 {
+            float: left;
+            background-color: #8440d1;
+            border: 1px solid green;
+            margin: 0;
+           
+        }
+
+        .button24 {
+            display: block;
+        }
+
+        .button25 {
+            display: block;
+        }
+
+        .button26 {
+            display: block;
+        }
+
+        .button27 {
+            display: block;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            padding: 16px 30px;
+            border: none;
+            text-align: center;
+            font-size: 17px;
+            background-color: #f1f1f1;
+            color: black;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .container .btn:hover {
+            background-color: rgb(13, 155, 190);
+            color: white;
+        }
+
+        .animatbtn {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #aae226;
+            border: none;
+            color: #ffff;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .animatbtn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .animatbtn span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .animatbtn:hover span {
+            padding-right: 25px;
+        }
+
+        .animatbtn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+        .animatbtn2 {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #af4c59;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .animatbtn2:hover {
+            background-color: #af4c59;
+        }
+
+        .animatbtn2:active {
+            background-color: #af4c59;
+            box-shadow: 0 5px #858484;
+            transform: translateY(4px);
+        }
+
+        .animatbtn3 {
+            opacity: 0.6;
+        }
+
+        .animatbtn3:hover {
+            opacity: 1;
+        }
+
+
+        .animatbtn4 {
+            position: relative;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .animatbtn4:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .animatbtn4:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Buttons</h1>
+
+    <h2>1.Button Colors</h2>
+    <button class="button">Green</button>
+    <button class="button button2">Tomato</button>
+    <button class="button button3">Gray</button>
+
+    <h2>2.Button Sizes</h2>
+    <button class="button">Green</button>
+    <button class="button button4">Pink</button>
+    <button class="button button5">Gray</button>
+
+    <h2>3.Rounded Buttons</h2>
+    <button class="button">Green</button>
+    <button class="button button6">Lightblue</button>
+    <button class="button button7">Gray</button>
+
+    <h2>4.Colored Button Borders</h2>
+    <button class="button button8">Red</button>
+    <button class="button button9">Pink</button>
+    <button class="button button10">Blue</button>
+
+    <h2>5.Hoverable Buttons</h2>
+    <button class="button button11">Red</button>
+    <button class="button button12">Pink</button>
+    <button class="button button13">Red</button>
+    <button class="button button14">Pink</button>
+
+    <h2>6.Shadow Buttons</h2>
+    <button class="button button15">Shadow Button</button>
+    <button class="button button16">Shadow on Hover</button>
+
+    <h2>7.Diabled Buttons</h2>
+    <button class="button">Normal Button</button>
+    <button class="button disabled">Disabled Button</button>
+
+    <h2>8.Button Width</h2>
+    <button class="button button17">250px</button>
+    <button class="button button18">50%</button>
+    <button class="button button19">100%</button>
+
+    <h2>9.Border Button Group</h2>
+    <button class="button button20">Button</button>
+    <button class="button button21">Button</button>
+    <button class="button button22">Button</button>
+    <button class="button button23">Button</button>
+
+    <h2 style="margin-top: 100px;">10.Vertical Button Group</h2>
+    <button class="button button24">Button</button>
+    <button class="button button25">Button</button>
+    <button class="button button26">Button</button>
+    <button class="button button27">Button</button>
+
+    <h2>11.Button on Image</h2>
+    <div class="container">
+        <img src="Images/paris.jpg" alt="Image" style="width: 100%;">
+        <button class="btn">Button</button>
+    </div>
+
+    <h2>12.Animated Button</h2>
+    <button class="animatbtn" style="vertical-align: middle;"><span>Hover</span></button>
+   
+    <button class="animatbtn2">Click Me</button>
+
+    <button class="button animatbtn3">Hover Over Me</button>
+
+    <button class="animatbtn4">Click Me</button>
+</body>
+</html>
