@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination, Multiple Columns, User Interface</title>
+
+    <style>
+        body {
+            margin-left: 30px;
+        }
+
+        /* Pagination */
+        .pagination1 {
+            display: inline-block;
+            
+        }
+
+        .pagination1 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+
+        .pagination2 {
+            display: inline-block;
+            
+        }
+
+        .pagination2 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        .pagination2 a.active {
+            background-color: palevioletred;
+            color: white;
+        }
+
+        .pagination2 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+
+        .pagination3 {
+            display: inline-block;
+        }
+
+        .pagination3 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        .pagination3 a.active {
+            background-color: palevioletred;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination3 a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        
+        .pagination4 {
+            display: inline-block;
+        }
+
+        .pagination4 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.4s;
+            font-size: 24px;
+        }
+
+        .pagination4 a.active {
+            background-color: palevioletred;
+            color: white;
+        }
+
+        .pagination4 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+
+        .pagination5 {
+            display: inline-block;
+        }
+
+        .pagination5 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.4s;
+            border: 1px solid #ddd;
+            font-size: 24px;
+        }
+
+        .pagination5 a.active {
+            background-color: palevioletred;
+            color: white;
+            border: 1px solid palevioletred;
+        }
+
+        .pagination5 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+
+        .pagination6 {
+            display: inline-block;
+        }
+
+        .pagination6 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ddd;
+            font-size: 24px;
+        }
+
+        .pagination6 a.active {
+            background-color: palevioletred;
+            color: white;
+            border: 1px solid palevioletred;
+        }
+
+        .pagination6 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .pagination6 a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination6 a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+
+        .pagination7 {
+            display: inline-block;
+        }
+
+        .pagination7 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.4s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+            font-size: 24px;
+        }
+
+        .pagination7 a.active {
+            background-color: palevioletred;
+            color: white;
+            border: 1px solid palevioletred;
+        }
+
+        .pagination7 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .pagination8 {
+            display: inline-block;
+        }
+
+        .pagination8 a {
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.4s;
+            border: 1px solid #ddd;
+            font-size: 24px;
+        }
+
+        .pagination8 a.active {
+            background-color: palevioletred;
+            color: white;
+            border: 1px solid palevioletred;
+        }
+
+        .pagination8 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+
+        .pagination9 {
+            display: inline-block;
+        }
+
+        .pagination9 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .pagination9 a.active {
+            background-color: rgb(176, 194, 13);
+            color: white;
+        }
+
+        .pagination9 a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        ul.breadcrumb {
+            padding: 8px 16px;
+            list-style: none;
+            background-color: #eee;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: red;
+        }
+
+
+        /* Multiple Columns */
+        .newspaper {
+           column-count: 3; 
+           column-gap: 40px;
+           column-rule-style: solid;
+           column-rule-width: 2px;
+           column-rule-color: rgb(189, 86, 209);
+           /* shorthhand-column-rule: 1px solid blue */
+           /* column-width: 100PX; IF YOU WANT TO USE THIS 
+           PROPERTY DON'T GIVE COLUMN-COUNT */
+        }
+
+        .newspaper h2 {
+            column-span: all;
+        }
+
+
+        /* User Interface */
+        .resize1 {
+            border: 2px solid black;
+            width: 300px;
+            padding: 20px;
+            resize: horizontal;
+            overflow: auto;
+            margin-bottom: 10px;
+        }
+
+        .resize2 {
+            border: 2px solid black;
+            width: 300px;
+            padding: 20px;
+            resize: vertical;
+            overflow: auto;
+            margin-bottom: 10px;
+        }
+
+        .resize3 {
+            border: 2px solid black;
+            width: 300px;
+            padding: 20px;
+            resize: both;
+            overflow: auto;
+        }
+
+        div.ex1 {
+            border: 1px solid black;
+            margin: 20px;
+            outline: 5px solid rgb(255, 144, 9);
+            outline-offset: 15px;
+        }
+
+        div.ex2 {
+            border: 1px solid black;
+            margin: 10px;
+            outline: 5px dotted rgb(231, 5, 212);
+            outline-offset: 5px;
+        }
+
+</style>
+    </style>
+</head>
+<body>
+    <h1>*Pagination, Multiple Columns, User Interface*</h1>
+
+    <h2>A.Pagination</h2>
+
+    <h3>1.Simple Pagination</h3>
+    <div class="pagination1">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>2.Active and Hoverable Pagination</h3>
+    <div class="pagination2">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>3.Rounded Active and Hoverable Buttons</h3>
+    <div class="pagination3">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+    
+    <h3>5.Hoverable Transition Effect</h3>
+    <div class="pagination4">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>6.Bordered Pagination</h3>
+    <div class="pagination5">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>7.Rounded Borders</h3>
+    <div class="pagination6">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>8.Space Between Link</h3>
+    <div class="pagination7">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&laquo;</a>
+    </div>
+
+    <h3>9.Centered Pagination</h3>
+    <div class="center">
+        <div class="pagination8">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&laquo;</a>
+        </div>
+    </div>
+
+    <h3>10.Navigation Pagination</h3>
+    <div class="pagination9">
+        <a href="#" class="active">Home</a>
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+    </div>
+
+    <h3>11.Breadcrumbs Pagination</h3>
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pictures</a></li>
+        <li><a href="#">Summer 15</a></li>
+        <li>India</li>
+    </ul>
+
+
+    <h1>B.Multiple Columns</h1>
+    <div class="newspaper">
+        <h2>This a Paragraph written below</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis ducimus impedit, minima quae eius recusandae facilis velit officia facere, numquam 
+        atque! Aspernatur et voluptatibus ducimus aliquid minima officia? Aliquam nostrum inventore, iure vitae modi soluta nisi, expedita rem tempore eaque, voluptatum possimus! Aut quis tempore, architecto praesentium ipsam officia, vero hic, sit mollitia 
+        suscipit impedit nisi cumque voluptatibus earum voluptate culpa eius nesciunt saepe ratione
+         itaque repudiandae. Impedit fugiat natus quas modi velit rerum temporibus unde animi dignissimos 
+         perferendis numquam sequi, ex quasi cupiditate, harum sunt? Corporis voluptates temporibus suscipit 
+         rerum repellat ipsam. Consequuntur nam modi tenetur soluta! Id, quo, eaque sapiente commodi ut culpa 
+         veritatis totam quisquam quam cumque rem corrupti iusto, optio expedita fugit modi cupiditate repellat? 
+         Tempore enim quibusdam, modi nisi officia adipisci alias, sapiente tempora maxime molestias provident 
+         velit iure iusto consequuntur magnam ipsa aliquid culpa saepe. Totam, ad. Magnam dolores praesentium 
+      </div>  
+        
+
+      <h1>C.User Interface</h1>
+
+      <h2>1.Resizing</h2>
+      <div class="resize1">
+        <h3>Horizontaly Resize</h3>
+        <p>Let the user resize only the width of this div element.</p>
+        <p>To resize: Click and drag the bottom right corner of this
+            div element.</p>
+      </div>
+
+      <div class="resize2">
+        <h3>Vertically Resize</h3>
+        <p>Let the user resize only the width of this div element.</p>
+        <p>To resize: Click and drag the bottom right corner of this
+            div element.</p>
+      </div>
+
+      <div class="resize3">
+        <h3>Resize from both</h3>
+        <p>Let the user resize only the width of this div element.</p>
+        <p>To resize: Click and drag the bottom right corner of this
+            div element.</p>
+      </div>
+
+      <h2>2.Outline OffSet</h2>
+      <div class="ex1">This div has a 4 pixels solid red outline 15 pixels 
+            outside the border edge.</div>
+        <br><br>
+
+        <div class="ex2">This div has a 5 pixels dashed blue outline 5 pixels 
+            outside the border edge.</div>
+        <br><br>
+</body>
+</html>
