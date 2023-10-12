@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masking</title>
+    <style>
+        .mask1 {
+            -webkit-mask-image: url("Images/w3logo.png");
+            mask-image: url("Images/w3logo.png");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+        }
+
+        .mask2 {
+            -webkit-mask-image: url("Images/w3logo.png");
+            mask-image: url("Images/w3logo.png");
+        }
+
+        .mask3 {
+            -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent);
+        }
+
+        p.text {
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .mask4 {
+            max-width: 600px;
+            height: 350px;
+            overflow-y: scroll;
+            background: url('Images/nature2.jpg') no-repeat;
+            background-size: cover;
+            -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent);
+        }
+
+        .mask5 {
+            width: 600px;
+           -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0.5) 50%);
+            mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0.5) 50%);
+        }
+
+        .mask6 {
+            width: 600px;
+           -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0,0,0,0.5) 50%);
+            mask-image: radial-gradient(ellipse, black 50%, rgba(0,0,0,0.5) 50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Masking</h1>
+
+    <h2>The mask-image Property</h2>
+    <p>An image with a mask layer image:</p>
+    <div class="mask1">
+        <img src="Images/nature2.jpg" alt="Image" width="600PX" height="400PX">
+    </div>
+
+    <p>Original Image</p>
+    <img src="Images/nature2.jpg" alt="Image" width="600PX" height="400PX">
+    
+    <p>Another Example<p>
+    <div class="mask2">
+        <img src="Images/nature2.jpg" alt="Image" width="600PX" height="400PX">
+    </div>
+
+    <h2>Use Gradients as the Mask Layer</h2>
+
+    <h1>1.Liner Gradient</h1>
+    <div class="mask3">
+        <img src="Images/nature2.jpg" alt="Image" width="600PX" height="400PX">
+    </div>
+
+    <div class="mask4">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, ex est. Sequi 
+            porro nisi placeat accusamus animi qui expedita, perspiciatis eum perferendis 
+            sapiente rem atque at delectus est laboriosam repellendus reiciendis vel culpa 
+        </p>
+        <p class="text"> dicta dignissimos quam illo aperiam! Dolores quae corporis excepturi sed perferendis 
+            ea inventore hic corrupti quis adipisci earum dolor fugiat laborum, illum quas. Illum 
+            quibusdam accusamus corrupti facilis, hic cupiditate non porro maxime eos fugiat vero 
+        </p>
+        <p class="text">sapiente necessitatibus similique iusto aspernatur excepturi veniam quidem! Magni, totam! 
+            Ipsa, repellat quam. Amet corrupti quos itaque facilis quae! Similique tenetur aliquid 
+            voluptate voluptatibus dolores! Libero doloribus voluptatibus totam distinctio nihil!
+        </p>
+        <p class="text">sapiente necessitatibus similique iusto aspernatur excepturi veniam quidem! Magni, totam! 
+            Ipsa, repellat quam. Amet corrupti quos itaque facilis quae! Similique tenetur aliquid 
+            voluptate voluptatibus dolores! Libero doloribus voluptatibus totam distinctio nihil!
+        </p>
+    </div>
+
+
+    <h1>2.Radial Gradient</h1>
+    <div class="mask5">
+        <img src="Images/nature2.jpg" alt="Image" width="600px" height="400px">
+    </div>
+
+    <div class="mask6">
+        <img src="Images/nature2.jpg" alt="Image" width="600px" height="400px">
+    </div>
+
+    <h2>Use SVG as the Mask Layer</h2>
+    
+    <h3>An SVG mask layer (formed as a triangle):</h3>
+    <svg width="600" height="400">
+        <mask id="svgmask1">
+            <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon>
+        </mask>
+
+        <image xmlns:xlink="http://www.w3.org/1999/xlin"
+                xlink:href="Images/nature2.jpg" mask="url(#svgmask1)"
+                width="600" height="400px">
+        </image>
+    </svg>
+
+    <svg width="600" height="400">
+        <mask id="svgmask2">
+            <polygon fill="#ffffff" points="100,10 40,198 190,78 10,78 160,198"></polygon>
+        </mask>
+
+        <image xmlns:xlink="http://www.w3.org/1999/xlin"
+                xlink:href="Images/nature2.jpg" mask="url(#svgmask2)"
+                width="600" height="400px">
+        </image>
+    </svg>
+
+    <svg width="600" height="400">
+        <mask id="svgmask3">
+          <circle fill="#ffffff" cx="75" cy="75" r="75"></circle>
+          <circle fill="#ffffff" cx="80" cy="260" r="75"></circle>
+          <circle fill="#ffffff" cx="270" cy="160" r="75"></circle>
+        </mask>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" 
+                xlink:href="Images/nature2.jpg" mask="url(#svgmask3)" 
+                width="600" height="400px"></image>
+      </svg>
+      
+</body>
+</html>
